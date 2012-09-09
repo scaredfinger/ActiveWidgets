@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-using Store.Win.Resources;
+using Store.Resources;
 
 namespace Store.Win.Controls
 {

@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Windows.Forms;
+using Store.Modules.Core;
 
 namespace Store.Win.Tests
 {
@@ -17,7 +18,7 @@ namespace Store.Win.Tests
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new MainForm());
+			Application.Run(new MainControl());
 		}
 		
 	}

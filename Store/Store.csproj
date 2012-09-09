@@ -40,8 +40,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\IModuleMenu.cs" />
+    <Compile Include="Modules\Core\MainViewModel.cs" />
     <Compile Include="MyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modules" />
+    <Folder Include="Modules\Core" />
+    <Folder Include="Domain" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ActiveWidgets\ActiveWidgets.csproj">
+      <Project>{957E40B7-7029-4856-BA23-6F1E74058332}</Project>
+      <Name>ActiveWidgets</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
 </Project>

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Store.Win.Resources {
+namespace Store.Resources {
 	using System;
 	
 	
@@ -39,7 +39,7 @@ namespace Store.Win.Resources {
 		internal static global::System.Resources.ResourceManager ResourceManager {
 			get {
 				if (object.ReferenceEquals(resourceMan, null)) {
-					global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Store.Win.Resources.Icons48", typeof(Icons48).Assembly);
+					global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Store.Resources.Icons48", typeof(Icons48).Assembly);
 					resourceMan = temp;
 				}
 				return resourceMan;

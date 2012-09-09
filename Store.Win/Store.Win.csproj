@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <OutputType>Library</OutputType>
-    <RootNamespace>Store.Win</RootNamespace>
+    <RootNamespace>Store</RootNamespace>
     <AssemblyName>Store.Win</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -40,11 +40,22 @@
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="VIBlend.WinForms.Controls, Version=9.0.0.0, Culture=neutral, PublicKeyToken=6feea38fef5ea0cf">
+      <HintPath>..\..\..\..\..\..\Program Files\VIBlend\Windows Forms Controls v.9.0.0.0\VIBlend.WinForms.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="VIBlend.WinForms.Utilities">
+      <HintPath>..\libs\VIBlend.WinForms.Utilities.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\Glyph.cs" />
     <Compile Include="Controls\MenuElement.cs" />
     <Compile Include="Controls\PageControl.cs" />
+    <Compile Include="Domain\ModuleMenu.cs" />
+    <Compile Include="Modules\Core\MainControl.cs" />
+    <Compile Include="Modules\Core\MainControl.Designer.cs">
+      <DependentUpon>MainControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Icons16.Designer.cs">
       <DependentUpon>Icons16.resx</DependentUpon>
@@ -61,6 +72,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls" />
+    <Folder Include="Modules" />
+    <Folder Include="Modules\Core" />
+    <Folder Include="Domain" />
     <Folder Include="Resources" />
   </ItemGroup>
   <ItemGroup>
@@ -72,21 +86,28 @@
       <Project>{B276FE0F-FE12-45BD-AF1D-F40933838CA6}</Project>
       <Name>Store</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Store\Store.csproj">
+      <Project>{B276FE0F-FE12-45BD-AF1D-F40933838CA6}</Project>
+      <Name>Store</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Modules\Core\MainControl.resx">
+      <DependentUpon>MainControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Icons16.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>Store.Win.Resources</CustomToolNamespace>
+      <CustomToolNamespace>Store.Resources</CustomToolNamespace>
       <LastGenOutput>Icons16.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Icons32.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>Store.Win.Resources</CustomToolNamespace>
+      <CustomToolNamespace>Store.Resources</CustomToolNamespace>
       <LastGenOutput>Icons32.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Icons48.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>Store.Win.Resources</CustomToolNamespace>
+      <CustomToolNamespace>Store.Resources</CustomToolNamespace>
       <LastGenOutput>Icons48.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>

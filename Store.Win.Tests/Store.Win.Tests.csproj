@@ -53,5 +53,19 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ActiveWidgets\ActiveWidgets.csproj">
+      <Project>{957E40B7-7029-4856-BA23-6F1E74058332}</Project>
+      <Name>ActiveWidgets</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Store.Win\Store.Win.csproj">
+      <Project>{E7AE2CFD-7439-49C3-B14E-0234C5A62E43}</Project>
+      <Name>Store.Win</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Store\Store.csproj">
+      <Project>{B276FE0F-FE12-45BD-AF1D-F40933838CA6}</Project>
+      <Name>Store</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
 </Project>
