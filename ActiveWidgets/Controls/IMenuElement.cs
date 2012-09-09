@@ -11,7 +11,6 @@ namespace ActiveWidgets.Controls
         /// <summary>
         /// Notifies the item has been actioned, e.g. Clicked
         /// </summary>
-        event EventHandler Action;
-        
+        event EventHandler Action;        
     }
 }
