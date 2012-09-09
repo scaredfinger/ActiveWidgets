@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using ActiveWidgets.Controls;
 
-namespace ActiveWidgets
+namespace ActiveWidgets.Menus
 {
 	/// <summary>
 	/// Manages menu items for current widget

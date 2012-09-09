@@ -53,18 +53,20 @@
     <Compile Include="Domain\MenuWidget.cs" />
     <Compile Include="Domain\SampleControl.cs" />
     <Compile Include="Domain\SampleWidget.cs" />
-    <Compile Include="MenuForFixture.cs" />
-    <Compile Include="MenuWhenActiveFixture.cs" />
+    <Compile Include="Units\Menus\MenuForFixture.cs" />
+    <Compile Include="Units\Menus\MenuWhenActiveFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\ServiceBusFixture.cs" />
-    <Compile Include="SupervisorFixture.cs" />
-    <Compile Include="Utils\ForEachExtensionFixture.cs" />
-    <Compile Include="Utils\RenderTextExtensionFixture.cs" />
+    <Compile Include="Units\Services\ServiceBusFixture.cs" />
+    <Compile Include="Units\SupervisorFixture.cs" />
+    <Compile Include="Units\Utils\ForEachExtensionFixture.cs" />
+    <Compile Include="Units\Utils\RenderTextExtensionFixture.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Domain" />
-    <Folder Include="Utils" />
-    <Folder Include="Services" />
+    <Folder Include="Units\Menus" />
+    <Folder Include="Units" />
+    <Folder Include="Units\Utils" />
+    <Folder Include="Units\Services" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ActiveWidgets\ActiveWidgets.csproj">

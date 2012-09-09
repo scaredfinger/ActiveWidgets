@@ -1,7 +1,7 @@
 using ActiveWidgets.Utils;
 using NUnit.Framework;
 
-namespace ActiveWidgets.Tests.Utils
+namespace ActiveWidgets.Units.Utils
 {
     [TestFixture]
     public class RenderTextExtensionFixture

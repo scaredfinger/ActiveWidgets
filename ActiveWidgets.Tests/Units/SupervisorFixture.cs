@@ -3,10 +3,10 @@ using ActiveWidgets;
 using ActiveWidgets.Controls;
 using NUnit.Framework;
 
-namespace Unit.Widgets
+namespace ActiveWidgets.Units
 {
     [TestFixture]
-    public class SupervisorFixture
+    public class WidgetFixture
     {
         private interface ISampleControl : IElement
         {

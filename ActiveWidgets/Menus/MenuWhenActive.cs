@@ -4,7 +4,7 @@ using System.Linq;
 using ActiveWidgets.Aspects;
 using ActiveWidgets.Controls;
 
-namespace ActiveWidgets
+namespace ActiveWidgets.Menus
 {
     /// <summary>
     /// Keeps a registry of menu items that will be available when a widget becomes active. 

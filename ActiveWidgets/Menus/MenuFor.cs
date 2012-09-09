@@ -1,6 +1,6 @@
 using System;
 
-namespace ActiveWidgets
+namespace ActiveWidgets.Menus
 {
     /// <summary>
     /// Registers menu items that would be shown when specified supervisor becomes active

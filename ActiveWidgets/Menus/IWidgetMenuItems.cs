@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using ActiveWidgets.Controls;
 
-namespace ActiveWidgets
+namespace ActiveWidgets.Menus
 {
     /// <summary>
     /// Keeps a registry of widget menu items. 

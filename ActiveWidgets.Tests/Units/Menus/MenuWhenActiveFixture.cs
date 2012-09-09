@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 
+using ActiveWidgets;
 using ActiveWidgets.Aspects;
 using ActiveWidgets.Controls;
-using ActiveWidgets;
+using ActiveWidgets.Menus;
 using Moq;
 using NUnit.Framework;
 
-namespace Unit.Widgets
+namespace ActiveWidgets.Units.Menus
 {
     [TestFixture]
     public class MenuWhenActiveFixture

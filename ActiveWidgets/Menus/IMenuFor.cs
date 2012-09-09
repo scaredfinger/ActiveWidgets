@@ -1,6 +1,6 @@
 using System;
 
-namespace ActiveWidgets
+namespace ActiveWidgets.Menus
 {
     /// <summary>
     /// Presents a more clean way to register menu items than <see cref="IMenuWhenActive"/>. All menu

@@ -3,15 +3,15 @@ using System.Threading;
 using ActiveWidgets.Services;
 using NUnit.Framework;
 
-namespace ActiveWidgets.Tests.Services
-{
-	public class Message{
-		public string Text { get; set; }
-	}
-	
+namespace ActiveWidgets.Units.Services
+{	
 	[TestFixture]
 	public class ServiceBusFixture
 	{
+		public class Message{
+			public string Text { get; set; }
+		}
+		
 		private ServiceBus _bus ;
 		
 		[SetUp]

@@ -12,6 +12,7 @@ namespace ActiveWidgets
     /// to use interfaces, this way the supervisor will be weakly coupled to the control and will make
     /// automatic tests easier.
     /// </typeparam>
+    /// </remarks>
     public abstract class Widget<TControl> : IWidget, IDisposable
         where TControl : IElement
     {
