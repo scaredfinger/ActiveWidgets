@@ -30,6 +30,9 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NLipsum.Core">
+      <HintPath>..\libs\NLipsum.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -44,10 +47,39 @@
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="VIBlend.WinForms.Controls, Version=9.0.0.0, Culture=neutral, PublicKeyToken=6feea38fef5ea0cf">
+      <HintPath>..\..\..\..\..\..\Program Files\VIBlend\Windows Forms Controls v.9.0.0.0\VIBlend.WinForms.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="VIBlend.WinForms.Utilities">
+      <HintPath>..\libs\VIBlend.WinForms.Utilities.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InteractiveTests.cs" />
+    <Compile Include="InteractiveTests.Designer.cs">
+      <DependentUpon>InteractiveTests.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomData.cs" />
+    <Compile Include="Resources\Icons16.Designer.cs">
+      <DependentUpon>Icons16.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Resources\Icons24.Designer.cs">
+      <DependentUpon>Icons24.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Resources\Icons32.Designer.cs">
+      <DependentUpon>Icons32.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Resources\Icons48.Designer.cs">
+      <DependentUpon>Icons48.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Tests\Main\Create.cs" />
+    <Compile Include="Tests\Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ActiveWidgets\ActiveWidgets.csproj">
@@ -62,6 +94,37 @@
       <Project>{B276FE0F-FE12-45BD-AF1D-F40933838CA6}</Project>
       <Name>Store</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="InteractiveTests.resx">
+      <DependentUpon>InteractiveTests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Icons16.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>Store.Win.Tests.Resources</CustomToolNamespace>
+      <LastGenOutput>Icons16.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Icons24.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>Store.Win.Tests.Resources</CustomToolNamespace>
+      <LastGenOutput>Icons24.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Icons32.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>Store.Win.Tests.Resources</CustomToolNamespace>
+      <LastGenOutput>Icons32.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Icons48.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>Store.Win.Tests.Resources</CustomToolNamespace>
+      <LastGenOutput>Icons48.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tests" />
+    <Folder Include="Resources" />
+    <Folder Include="Tests\Main" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
 </Project>

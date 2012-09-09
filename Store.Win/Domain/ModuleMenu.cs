@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using ActiveWidgets.Controls;
+using Store.Win.Controls;
 
 namespace Store.Domain
 {
@@ -12,6 +13,8 @@ namespace Store.Domain
 		public string Caption { get ; set ; }
 		
 		public string Tooltip { get ; set; }
+		
+		public Glyph Glyph { get; set; }
 		
 		public IEnumerable<IMenuElement> Options { get; set; }
 	}

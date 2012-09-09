@@ -34,8 +34,11 @@ namespace Store.Modules.Core
 			this._toolbar = new System.Windows.Forms.ToolStrip();
 			this._splitContainer = new System.Windows.Forms.SplitContainer();
 			this._modules = new VIBlend.WinForms.Controls.vNavPane();
+			this.vNavPaneItem1 = new VIBlend.WinForms.Controls.vNavPaneItem();
 			this._splitContainer.Panel1.SuspendLayout();
 			this._splitContainer.SuspendLayout();
+			this._modules.SuspendLayout();
+			this.vNavPaneItem1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// _status
@@ -75,14 +78,40 @@ namespace Store.Modules.Core
 			// 
 			// _modules
 			// 
+			this._modules.Controls.Add(this.vNavPaneItem1);
 			this._modules.Dock = System.Windows.Forms.DockStyle.Fill;
+			this._modules.Items.Add(this.vNavPaneItem1);
 			this._modules.Location = new System.Drawing.Point(0, 0);
 			this._modules.Name = "_modules";
 			this._modules.Size = new System.Drawing.Size(189, 336);
 			this._modules.TabIndex = 2;
-			this._modules.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.VISTABLUE;
+			this._modules.ToolTipDuration = 10000;
+			this._modules.ToolTipShowDelay = 800;
+			this._modules.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.EXPRESSIONDARK;
 			// 
-			// Main
+			// vNavPaneItem1
+			// 
+			this.vNavPaneItem1.BackColor = System.Drawing.Color.White;
+			this.vNavPaneItem1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.vNavPaneItem1.HeaderHeight = 52;
+			this.vNavPaneItem1.HeaderText = "Header";
+			this.vNavPaneItem1.HeaderTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// vNavPaneItem1.ItemPanel
+			// 
+			this.vNavPaneItem1.ItemPanel.AutoScroll = true;
+			this.vNavPaneItem1.ItemPanel.Location = new System.Drawing.Point(1, 52);
+			this.vNavPaneItem1.ItemPanel.Name = "ItemPanel";
+			this.vNavPaneItem1.ItemPanel.Size = new System.Drawing.Size(187, 283);
+			this.vNavPaneItem1.ItemPanel.TabIndex = 1;
+			this.vNavPaneItem1.Location = new System.Drawing.Point(0, 0);
+			this.vNavPaneItem1.Name = "vNavPaneItem1";
+			this.vNavPaneItem1.Size = new System.Drawing.Size(189, 336);
+			this.vNavPaneItem1.TabIndex = 0;
+			this.vNavPaneItem1.Text = "vNavPaneItem1";
+			this.vNavPaneItem1.TooltipText = "vNavPaneItem1";
+			// 
+			// MainControl
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -92,13 +121,16 @@ namespace Store.Modules.Core
 			this.Controls.Add(this._status);
 			this.Controls.Add(this._topMenu);
 			this.MainMenuStrip = this._topMenu;
-			this.Name = "Main";
+			this.Name = "MainControl";
 			this.Text = "Main";
 			this._splitContainer.Panel1.ResumeLayout(false);
 			this._splitContainer.ResumeLayout(false);
+			this._modules.ResumeLayout(false);
+			this.vNavPaneItem1.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private VIBlend.WinForms.Controls.vNavPaneItem vNavPaneItem1;
 		private VIBlend.WinForms.Controls.vNavPane _modules;
 		private System.Windows.Forms.SplitContainer _splitContainer;
 		private System.Windows.Forms.ToolStrip _toolbar;

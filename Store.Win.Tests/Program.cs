@@ -15,11 +15,10 @@ namespace Store.Win.Tests
 		/// </summary>
 		[STAThread]
 		private static void Main(string[] args)
-		{
+		{			
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new MainControl());
-		}
-		
+			Application.Run(new InteractiveTests());
+		}		
 	}
 }
