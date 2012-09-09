@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+# SharpDevelop 4.2.1.8805
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActiveWidgets.Tests", "ActiveWidgets.Tests\ActiveWidgets.Tests.csproj", "{26E278E5-35A7-4AF5-AC8D-1CE8769CE7CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActiveWidgets", "ActiveWidgets\ActiveWidgets.csproj", "{957E40B7-7029-4856-BA23-6F1E74058332}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26E278E5-35A7-4AF5-AC8D-1CE8769CE7CA}.Debug|x86.Build.0 = Debug|x86
+		{26E278E5-35A7-4AF5-AC8D-1CE8769CE7CA}.Debug|x86.ActiveCfg = Debug|x86
+		{26E278E5-35A7-4AF5-AC8D-1CE8769CE7CA}.Release|x86.Build.0 = Release|x86
+		{26E278E5-35A7-4AF5-AC8D-1CE8769CE7CA}.Release|x86.ActiveCfg = Release|x86
+		{957E40B7-7029-4856-BA23-6F1E74058332}.Debug|x86.Build.0 = Debug|x86
+		{957E40B7-7029-4856-BA23-6F1E74058332}.Debug|x86.ActiveCfg = Debug|x86
+		{957E40B7-7029-4856-BA23-6F1E74058332}.Release|x86.Build.0 = Release|x86
+		{957E40B7-7029-4856-BA23-6F1E74058332}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+EndGlobal
