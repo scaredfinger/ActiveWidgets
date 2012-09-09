@@ -42,7 +42,6 @@
   <ItemGroup>
     <Compile Include="Domain\IModuleMenu.cs" />
     <Compile Include="Modules\Core\MainViewModel.cs" />
-    <Compile Include="MyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
