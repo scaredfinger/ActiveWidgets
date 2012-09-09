@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1000]C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\ActiveWidgets.sln</TopNode>
+  <SelectedNode>[0-1000]C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\ActiveWidgets.sln</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1000]C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\ActiveWidgets.sln" Expanded="true" />
+    <Node UniqueName="[0-1028]C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\ActiveWidgets.Tests\bin\Debug\ActiveWidgets.Tests.dll" Expanded="true" />
+    <Node UniqueName="[0-1029]ActiveWidgets" Expanded="true" />
+    <Node UniqueName="[0-1030]ActiveWidgets.Units" Expanded="true" />
+    <Node UniqueName="[0-1031]ActiveWidgets.Units.Menus" Expanded="true" />
+    <Node UniqueName="[0-1001]ActiveWidgets.Units.Menus.MenuForFixture" Expanded="true" />
+    <Node UniqueName="[0-1005]ActiveWidgets.Units.Menus.MenuWhenActiveFixture" Expanded="true" />
+    <Node UniqueName="[0-1032]ActiveWidgets.Units.Services" Expanded="true" />
+    <Node UniqueName="[0-1014]ActiveWidgets.Units.Services.ServiceBusFixture" Expanded="true" />
+    <Node UniqueName="[0-1033]ActiveWidgets.Units.Utils" Expanded="true" />
+    <Node UniqueName="[0-1023]ActiveWidgets.Units.Utils.ForEachExtensionFixture" Expanded="true" />
+    <Node UniqueName="[0-1026]ActiveWidgets.Units.Utils.RenderTextExtensionFixture" Expanded="true" />
+    <Node UniqueName="[0-1018]ActiveWidgets.Units.WidgetFixture" Expanded="true" />
+  </Nodes>
+</VisualState>
