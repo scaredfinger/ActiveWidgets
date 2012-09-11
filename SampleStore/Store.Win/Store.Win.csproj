@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
-    <ProjectGuid>{133008EB-21E8-495F-B832-C5BB70117D3D}</ProjectGuid>
+    <ProjectGuid>{E7AE2CFD-7439-49C3-B14E-0234C5A62E43}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>Store.Win.Tests</RootNamespace>
-    <AssemblyName>Store.Win.Tests</AssemblyName>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Store</RootNamespace>
+    <AssemblyName>Store.Win</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
   </PropertyGroup>
@@ -30,15 +30,8 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NLipsum.Core">
-      <HintPath>..\libs\NLipsum.Core.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Drawing" />
@@ -55,19 +48,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InteractiveTests.cs" />
-    <Compile Include="InteractiveTests.Designer.cs">
-      <DependentUpon>InteractiveTests.cs</DependentUpon>
+    <Compile Include="Controls\Glyph.cs" />
+    <Compile Include="Controls\MenuElement.cs" />
+    <Compile Include="Controls\PageControl.cs" />
+    <Compile Include="Domain\ModuleMenu.cs" />
+    <Compile Include="Modules\Core\MainControl.cs" />
+    <Compile Include="Modules\Core\MainControl.Designer.cs">
+      <DependentUpon>MainControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RandomData.cs" />
     <Compile Include="Resources\Icons16.Designer.cs">
       <DependentUpon>Icons16.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-    </Compile>
-    <Compile Include="Resources\Icons24.Designer.cs">
-      <DependentUpon>Icons24.resx</DependentUpon>
       <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Resources\Icons32.Designer.cs">
@@ -78,17 +69,22 @@
       <DependentUpon>Icons48.resx</DependentUpon>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Include="Tests\Main\Create.cs" />
-    <Compile Include="Tests\Test.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ActiveWidgets\ActiveWidgets.csproj">
+    <Folder Include="Controls" />
+    <Folder Include="Modules" />
+    <Folder Include="Modules\Core" />
+    <Folder Include="Domain" />
+    <Folder Include="Resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ActiveWidgets\ActiveWidgets.csproj">
       <Project>{957E40B7-7029-4856-BA23-6F1E74058332}</Project>
       <Name>ActiveWidgets</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Store.Win\Store.Win.csproj">
-      <Project>{E7AE2CFD-7439-49C3-B14E-0234C5A62E43}</Project>
-      <Name>Store.Win</Name>
+    <ProjectReference Include="..\Store\Store.csproj">
+      <Project>{B276FE0F-FE12-45BD-AF1D-F40933838CA6}</Project>
+      <Name>Store</Name>
     </ProjectReference>
     <ProjectReference Include="..\Store\Store.csproj">
       <Project>{B276FE0F-FE12-45BD-AF1D-F40933838CA6}</Project>
@@ -96,35 +92,24 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="InteractiveTests.resx">
-      <DependentUpon>InteractiveTests.cs</DependentUpon>
+    <EmbeddedResource Include="Modules\Core\MainControl.resx">
+      <DependentUpon>MainControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Icons16.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>Store.Win.Tests.Resources</CustomToolNamespace>
+      <CustomToolNamespace>Store.Resources</CustomToolNamespace>
       <LastGenOutput>Icons16.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Icons24.resx">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <Generator>ResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>Store.Win.Tests.Resources</CustomToolNamespace>
-      <LastGenOutput>Icons24.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Icons32.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>Store.Win.Tests.Resources</CustomToolNamespace>
+      <CustomToolNamespace>Store.Resources</CustomToolNamespace>
       <LastGenOutput>Icons32.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Icons48.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>Store.Win.Tests.Resources</CustomToolNamespace>
+      <CustomToolNamespace>Store.Resources</CustomToolNamespace>
       <LastGenOutput>Icons48.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tests" />
-    <Folder Include="Resources" />
-    <Folder Include="Tests\Main" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
 </Project>

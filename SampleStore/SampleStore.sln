@@ -6,13 +6,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActiveWidgets", "..\ActiveW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActiveWidgets.Tests", "..\ActiveWidgets.Tests\ActiveWidgets.Tests.csproj", "{26E278E5-35A7-4AF5-AC8D-1CE8769CE7CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store", "..\Store\Store.csproj", "{B276FE0F-FE12-45BD-AF1D-F40933838CA6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store", "Store\Store.csproj", "{B276FE0F-FE12-45BD-AF1D-F40933838CA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Tests", "..\Store.Tests\Store.Tests.csproj", "{93FA64ED-6A10-48EB-9A5C-0A0B4C3807B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Tests", "Store.Tests\Store.Tests.csproj", "{93FA64ED-6A10-48EB-9A5C-0A0B4C3807B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Win", "..\Store.Win\Store.Win.csproj", "{E7AE2CFD-7439-49C3-B14E-0234C5A62E43}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Win", "Store.Win\Store.Win.csproj", "{E7AE2CFD-7439-49C3-B14E-0234C5A62E43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Win.Tests", "..\Store.Win.Tests\Store.Win.Tests.csproj", "{133008EB-21E8-495F-B832-C5BB70117D3D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Win.Tests", "Store.Win.Tests\Store.Win.Tests.csproj", "{133008EB-21E8-495F-B832-C5BB70117D3D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

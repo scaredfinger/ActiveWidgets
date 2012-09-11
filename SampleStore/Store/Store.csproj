@@ -50,7 +50,7 @@
     <Folder Include="Domain" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ActiveWidgets\ActiveWidgets.csproj">
+    <ProjectReference Include="..\..\ActiveWidgets\ActiveWidgets.csproj">
       <Project>{957E40B7-7029-4856-BA23-6F1E74058332}</Project>
       <Name>ActiveWidgets</Name>
     </ProjectReference>
