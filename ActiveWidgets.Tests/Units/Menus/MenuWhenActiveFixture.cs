@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-
-using ActiveWidgets;
-using ActiveWidgets.Aspects;
 using ActiveWidgets.Controls;
 using ActiveWidgets.Menus;
 using Moq;
@@ -94,7 +90,7 @@ namespace ActiveWidgets.Units.Menus
         private static readonly MenuSupervisor Supervisor = new MenuSupervisor();
         private static readonly UnauthorizedSupervisor Unauthorized = new UnauthorizedSupervisor();
 
-        private MenuWhenActive _menuWhenActive;
+        private WidgetMenuItems _widgetMenuItems;
 
         private Mock<IAllWidgets> _allWidgets;
         
@@ -107,19 +103,19 @@ namespace ActiveWidgets.Units.Menus
             _allWidgets.Setup(m => m.GetWidget(typeof(UnauthorizedSupervisor)))
                 .Returns(Unauthorized);
 
-            _menuWhenActive = new MenuWhenActive(_allWidgets.Object);
+            _widgetMenuItems = new WidgetMenuItems(_allWidgets.Object);
         }
 
         [Test]
         public void Can_create_instances()
         {
-            Assert.That(_menuWhenActive, Is.Not.Null);
+            Assert.That(_widgetMenuItems, Is.Not.Null);
         }
 
         [Test]
         public void GetMenuItemsFor_result_starts_empty()
         {
-            var list = _menuWhenActive.GetMenuFor(typeof (SampleSupervisor));
+            var list = _widgetMenuItems.GetMenuFor(typeof (SampleSupervisor));
 
             Assert.That(list, Is.Empty);
         }
@@ -127,9 +123,9 @@ namespace ActiveWidgets.Units.Menus
         [Test]
         public void GetMenuItemsFor_calls_allWidgets_GetSupervisor_if_registered()
         {
-            _menuWhenActive.Register(typeof(MenuSupervisor), typeof(SampleSupervisor));
+            _widgetMenuItems.Register(typeof(MenuSupervisor), typeof(SampleSupervisor));
 
-            var result = _menuWhenActive.GetMenuFor(typeof (SampleSupervisor)).ToList();
+            var result = _widgetMenuItems.GetMenuFor(typeof (SampleSupervisor)).ToList();
 
             _allWidgets.Verify(m => m.GetWidget(typeof(MenuSupervisor)));
         }
@@ -137,9 +133,9 @@ namespace ActiveWidgets.Units.Menus
         [Test]
         public void GetMenuItemsFor_calls_allWidgets_GetSupervisor_if_registered_using_generic()
         {
-            _menuWhenActive.Register<MenuSupervisor, SampleSupervisor>();
+            _widgetMenuItems.Register<MenuSupervisor, SampleSupervisor>();
 
-            var list = _menuWhenActive.GetMenuFor(typeof(SampleSupervisor));
+            var list = _widgetMenuItems.GetMenuFor(typeof(SampleSupervisor));
             var array = list.ToArray();
 
             _allWidgets.Verify(m => m.GetWidget(typeof(MenuSupervisor)));
@@ -148,9 +144,9 @@ namespace ActiveWidgets.Units.Menus
         [Test]
         public void GetMenuItemsFor_returns_allWidgets_GetSupervisor_if_registered()
         {
-            _menuWhenActive.Register(typeof(MenuSupervisor), typeof(SampleSupervisor));
+            _widgetMenuItems.Register(typeof(MenuSupervisor), typeof(SampleSupervisor));
 
-            var list = _menuWhenActive.GetMenuFor(typeof(SampleSupervisor));
+            var list = _widgetMenuItems.GetMenuFor(typeof(SampleSupervisor));
 
             Assert.That(list, Has.Some.EqualTo(ControlInstance));
         }
@@ -158,9 +154,9 @@ namespace ActiveWidgets.Units.Menus
         [Test]
         public void GetMenuItemsFor_returns_allWidgets_GetSupervisor_if_registered_using_generic()
         {
-            _menuWhenActive.Register<MenuSupervisor, SampleSupervisor>();
+            _widgetMenuItems.Register<MenuSupervisor, SampleSupervisor>();
 
-            var list = _menuWhenActive.GetMenuFor(typeof(SampleSupervisor));
+            var list = _widgetMenuItems.GetMenuFor(typeof(SampleSupervisor));
 
             Assert.That(list, Has.Some.EqualTo(ControlInstance));
         }
@@ -169,9 +165,9 @@ namespace ActiveWidgets.Units.Menus
         [Test]
         public void GetMenuItemsFor_generic_returns_allWidgets_GetSupervisor_if_registered()
         {
-            _menuWhenActive.Register(typeof(MenuSupervisor), typeof(SampleSupervisor));
+            _widgetMenuItems.Register(typeof(MenuSupervisor), typeof(SampleSupervisor));
 
-            var list = _menuWhenActive.GetMenuFor<SampleSupervisor>();
+            var list = _widgetMenuItems.GetMenuFor<SampleSupervisor>();
 
             Assert.That(list, Has.Some.EqualTo(ControlInstance));
         }
@@ -179,9 +175,9 @@ namespace ActiveWidgets.Units.Menus
         [Test]
         public void GetMenuItemsFor_generic_returns_allWidgets_GetSupervisor_if_registered_using_generic()
         {
-            _menuWhenActive.Register<MenuSupervisor, SampleSupervisor>();
+            _widgetMenuItems.Register<MenuSupervisor, SampleSupervisor>();
 
-            var list = _menuWhenActive.GetMenuFor<SampleSupervisor>();
+            var list = _widgetMenuItems.GetMenuFor<SampleSupervisor>();
 
             Assert.That(list, Has.Some.EqualTo(ControlInstance));
         }

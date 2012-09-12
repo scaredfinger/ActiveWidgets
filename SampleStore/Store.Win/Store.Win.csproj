@@ -43,6 +43,12 @@
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="VIBlend.WinForms.Controls, Version=9.0.0.0, Culture=neutral, PublicKeyToken=6feea38fef5ea0cf">
+      <HintPath>..\..\libs\VIBlend.WinForms.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="VIBlend.WinForms.Utilities">
+      <HintPath>..\..\libs\VIBlend.WinForms.Utilities.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\Glyph.cs" />
@@ -50,6 +56,13 @@
     <Compile Include="Controls\PageControl.cs" />
     <Compile Include="Domain\MenuElementGroup.cs" />
     <Compile Include="Modules\Core\MainControl.cs" />
+    <Compile Include="Controls\PageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Domain\ModuleMenu.cs" />
+    <Compile Include="Modules\Core\MainControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Modules\Core\MainControl.Designer.cs">
       <DependentUpon>MainControl.cs</DependentUpon>
     </Compile>
@@ -67,13 +80,7 @@
       <AutoGen>True</AutoGen>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controls" />
-    <Folder Include="Modules" />
-    <Folder Include="Modules\Core" />
-    <Folder Include="Domain" />
-    <Folder Include="Resources" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\ActiveWidgets\ActiveWidgets.csproj">
       <Project>{957E40B7-7029-4856-BA23-6F1E74058332}</Project>

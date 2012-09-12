@@ -3,14 +3,14 @@ using System;
 namespace ActiveWidgets.Menus
 {
     /// <summary>
-    /// Presents a more clean way to register menu items than <see cref="IMenuWhenActive"/>. All menu
+    /// Presents a more clean way to register menu items than <see cref="IWidgetMenuItems"/>. All menu
     /// items registered in this instance will be available when a supervisor of type <c>TWidget</c> gets
     /// active.
     /// </summary>
     /// <typeparam name="TWidget">Owner of this menu item set. This apparently unused parameter is 
     /// important for dependency injection.</typeparam>
     /// <remarks>
-    /// This type instances make registering menu items easier and clearer than using <see cref="IMenuWhenActive"/>,
+    /// This type instances make registering menu items easier and clearer than using <see cref="IWidgetMenuItems"/>,
     /// but anyways the later will be used underneath.
     /// 
     /// To register menu items create a Bootstrap with a dependency to this type:

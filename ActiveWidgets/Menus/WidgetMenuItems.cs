@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using ActiveWidgets.Aspects;
 using ActiveWidgets.Controls;
 
 namespace ActiveWidgets.Menus
@@ -12,7 +11,7 @@ namespace ActiveWidgets.Menus
     /// it would be more confortable to use <see cref="IMenuFor{TWidget}"/>
     /// instead.
     /// </summary>
-    public class MenuWhenActive : IWidgetMenuItems
+    public class WidgetMenuItems : IWidgetMenuItems
     {
         private readonly IAllWidgets _allWidgets;
         private readonly Dictionary<Type, List<Type>> _registered = new Dictionary<Type, List<Type>>();
@@ -21,7 +20,7 @@ namespace ActiveWidgets.Menus
         /// Creates an instance
         /// </summary>
         /// <param name="allWidgets">All widgets</param>
-        public MenuWhenActive(IAllWidgets allWidgets)
+        public WidgetMenuItems(IAllWidgets allWidgets)
         {
             _allWidgets = allWidgets;
         }

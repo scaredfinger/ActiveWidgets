@@ -15,8 +15,8 @@ namespace Store.Win.Tests
 {
 	public static class Random
 	{
-		private static readonly RandomInt _numberGenerator = new RandomInt();
-		private static readonly LipsumGenerator _lipsum = 
+		private static readonly RandomInt NumberGenerator = new RandomInt();
+		private static readonly LipsumGenerator Lipsum = 
 			new LipsumGenerator(Lipsums.LoremIpsum, false);
 		
 		private static readonly Image[] Images16x16 = LoadImages(Icons16.ResourceManager);
@@ -24,7 +24,7 @@ namespace Store.Win.Tests
 		private static Image[] LoadImages(ResourceManager manager)
 		{
 			return AllResourcesIn(manager)
-				.Select(x => manager.GetObject(x))
+				.Select(manager.GetObject)
 				.Cast<Image>()
 				.ToArray();
 		}
@@ -45,7 +45,7 @@ namespace Store.Win.Tests
 		
 		public static string Sentence()
 		{
-			return _lipsum.GenerateSentences(1)[0] ;
+			return Lipsum.GenerateSentences(1)[0] ;
 		}
 		
 		public static string Name()
@@ -56,22 +56,22 @@ namespace Store.Win.Tests
 		
 		public static string Name(int count)
 		{
-			return string.Join("", _lipsum.GenerateWords(count));
+			return string.Join("", Lipsum.GenerateWords(count));
 		}
 		
 		public static int Int()
 		{
-			return _numberGenerator.Next();
+			return NumberGenerator.Next();
 		}
 		
 		public static int Int(int max)
 		{
-			return _numberGenerator.Next(max) ;
+			return NumberGenerator.Next(max) ;
 		}
 		
 		public static int Int(int min, int max)
 		{
-			return _numberGenerator.Next(min, max);
+			return NumberGenerator.Next(min, max);
 		}
 		
 		public static DateTime Date()

@@ -34,7 +34,7 @@
       <HintPath>..\..\libs\CG.Controls.Grid.dll</HintPath>
     </Reference>
     <Reference Include="NLipsum.Core">
-      <HintPath>..\libs\NLipsum.Core.dll</HintPath>
+      <HintPath>..\..\libs\NLipsum.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -50,9 +50,17 @@
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="VIBlend.WinForms.Controls, Version=9.0.0.0, Culture=neutral, PublicKeyToken=6feea38fef5ea0cf">
+      <HintPath>..\..\libs\VIBlend.WinForms.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="VIBlend.WinForms.Utilities">
+      <HintPath>..\..\libs\VIBlend.WinForms.Utilities.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InteractiveTests.cs" />
+    <Compile Include="InteractiveTests.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="InteractiveTests.Designer.cs">
       <DependentUpon>InteractiveTests.cs</DependentUpon>
     </Compile>
@@ -118,10 +126,6 @@
       <LastGenOutput>Icons48.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tests" />
-    <Folder Include="Resources" />
-    <Folder Include="Tests\Main" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
 </Project>
