@@ -29,60 +29,72 @@ namespace Store.Win.Tests
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this._mainGroup = new System.Windows.Forms.GroupBox();
-			this._mainLayout = new System.Windows.Forms.FlowLayoutPanel();
-			this._mainButton = new VIBlend.WinForms.Controls.vButton();
-			this._mainGroup.SuspendLayout();
-			this._mainLayout.SuspendLayout();
+			CG.Controls.NavigationBar.Office2003NavigationBarRenderer office2003NavigationBarRenderer1 = new CG.Controls.NavigationBar.Office2003NavigationBarRenderer();
+			CG.Controls.Grid.Buttons.OfficeButtonRenderer officeButtonRenderer1 = new CG.Controls.Grid.Buttons.OfficeButtonRenderer();
+			this._mainTests = new CG.Controls.NavigationBar.ExPanel();
+			this.exButton1 = new CG.Controls.Grid.Buttons.ExButton();
+			this._mainTests.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// _mainGroup
+			// _mainTests
 			// 
-			this._mainGroup.Controls.Add(this._mainLayout);
-			this._mainGroup.Location = new System.Drawing.Point(12, 12);
-			this._mainGroup.Name = "_mainGroup";
-			this._mainGroup.Size = new System.Drawing.Size(200, 385);
-			this._mainGroup.TabIndex = 1;
-			this._mainGroup.TabStop = false;
-			this._mainGroup.Text = "Main";
+			this._mainTests.BackColor = System.Drawing.Color.White;
+			this._mainTests.Controls.Add(this.exButton1);
+			this._mainTests.HeaderText = "Main Tests";
+			this._mainTests.Location = new System.Drawing.Point(12, 1);
+			this._mainTests.Name = "_mainTests";
+			office2003NavigationBarRenderer1.BorderColor = System.Drawing.Color.DarkBlue;
+			office2003NavigationBarRenderer1.ColorPreset = CG.Controls.Common.ColorPresetType.Blue;
+			office2003NavigationBarRenderer1.HeaderColorFrom = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(131)))), ((int)(((byte)(211)))));
+			office2003NavigationBarRenderer1.HeaderColorTo = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(55)))), ((int)(((byte)(156)))));
+			office2003NavigationBarRenderer1.HeaderTextColor = System.Drawing.Color.White;
+			office2003NavigationBarRenderer1.PanelBackColor = System.Drawing.Color.White;
+			office2003NavigationBarRenderer1.PanelColorFrom = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
+			office2003NavigationBarRenderer1.PanelColorTo = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(168)))), ((int)(((byte)(225)))));
+			office2003NavigationBarRenderer1.PanelOverColorFrom = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(210)))));
+			office2003NavigationBarRenderer1.PanelOverColorTo = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(200)))), ((int)(((byte)(106)))));
+			office2003NavigationBarRenderer1.PanelSelectedColorFrom = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(223)))), ((int)(((byte)(137)))));
+			office2003NavigationBarRenderer1.PanelSelectedColorTo = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(156)))), ((int)(((byte)(32)))));
+			office2003NavigationBarRenderer1.PanelTextColor = System.Drawing.Color.Black;
+			this._mainTests.Renderer = office2003NavigationBarRenderer1;
+			this._mainTests.Size = new System.Drawing.Size(236, 396);
+			this._mainTests.TabIndex = 0;
+			this._mainTests.Text = "MainTests";
 			// 
-			// _mainLayout
+			// exButton1
 			// 
-			this._mainLayout.Controls.Add(this._mainButton);
-			this._mainLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-			this._mainLayout.Location = new System.Drawing.Point(3, 16);
-			this._mainLayout.Name = "_mainLayout";
-			this._mainLayout.Size = new System.Drawing.Size(194, 366);
-			this._mainLayout.TabIndex = 1;
-			// 
-			// _mainButton
-			// 
-			this._mainButton.AllowAnimations = true;
-			this._mainButton.BackColor = System.Drawing.Color.Transparent;
-			this._mainButton.Location = new System.Drawing.Point(3, 3);
-			this._mainButton.Name = "_mainButton";
-			this._mainButton.RoundedCornersMask = ((byte)(15));
-			this._mainButton.Size = new System.Drawing.Size(188, 30);
-			this._mainButton.TabIndex = 0;
-			this._mainButton.Text = "Main";
-			this._mainButton.UseVisualStyleBackColor = false;
-			this._mainButton.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.VISTABLUE;
-			this._mainButton.Click += new System.EventHandler(this.Main);
+			this.exButton1.BackColor = System.Drawing.Color.Transparent;
+			this.exButton1.CornerRadius = 3;
+			this.exButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+			this.exButton1.DrawFocusRect = true;
+			this.exButton1.ImageOffset = new System.Drawing.Point(4, 0);
+			this.exButton1.ImageSize = new System.Drawing.Size(16, 16);
+			this.exButton1.IsSplitButton = false;
+			this.exButton1.Location = new System.Drawing.Point(18, 37);
+			this.exButton1.MetroColorScheme = CG.Controls.Grid.Render.MetroScheme.Orange;
+			this.exButton1.Name = "exButton1";
+			this.exButton1.PaddingText = new System.Windows.Forms.Padding(4);
+			officeButtonRenderer1.TextColorDisabled = System.Drawing.SystemColors.GrayText;
+			this.exButton1.Renderer = officeButtonRenderer1;
+			this.exButton1.RenderType = CG.Controls.Common.EnRenderType.Office2007;
+			this.exButton1.Size = new System.Drawing.Size(100, 23);
+			this.exButton1.SplitButtonWidth = 20;
+			this.exButton1.TabIndex = 0;
+			this.exButton1.Text = "exButton1";
+			this.exButton1.Click += new System.EventHandler(this.ExButton1Click);
 			// 
 			// InteractiveTests
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(935, 409);
-			this.Controls.Add(this._mainGroup);
+			this.Controls.Add(this._mainTests);
 			this.Name = "InteractiveTests";
 			this.Text = "InteractiveTess";
-			this._mainGroup.ResumeLayout(false);
-			this._mainLayout.ResumeLayout(false);
+			this._mainTests.ResumeLayout(false);
 			this.ResumeLayout(false);
 		}
-		private VIBlend.WinForms.Controls.vButton _mainButton;
-		private System.Windows.Forms.FlowLayoutPanel _mainLayout;
-		private System.Windows.Forms.GroupBox _mainGroup;
+		private CG.Controls.Grid.Buttons.ExButton exButton1;
+		private CG.Controls.NavigationBar.ExPanel _mainTests;
 	}
 }

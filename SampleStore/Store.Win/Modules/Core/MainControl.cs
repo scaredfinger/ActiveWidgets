@@ -4,15 +4,16 @@ using System.Windows.Forms;
 
 using ActiveWidgets.Controls;
 using ActiveWidgets.Utils;
+using CG.Controls.Grid.Forms;
+using CG.Controls.NavigationBar;
 using Store.Domain;
-using VIBlend.WinForms.Controls;
 
 namespace Store.Modules.Core
 {
 	/// <summary>
 	/// Description of Main.
 	/// </summary>
-	public partial class MainControl : Form, IElement
+	public partial class MainControl : ExForm, IElement
 	{
 		public MainControl()
 		{
@@ -38,16 +39,31 @@ namespace Store.Modules.Core
 		public void CreateModuleOption(MenuElementGroup moduleMenu)
 		{
 			var groupImage = moduleMenu.Glyph.Medium ;
-			var item = new vNavPaneItem
-			{
+			var panel = new ExNavigationPanel{
 				Text = moduleMenu.Caption,
-				TooltipText = moduleMenu.Tooltip,
-				Image = groupImage
+				PanelImage = groupImage
 			};
 			
-			//item.HeaderHeight = groupImage.Height + 7;
 			
-			_modules.Items.Add(item) ;
+			_modulesBar.AddPanel(panel) ;
+		}
+		
+		private void MainLayoutResized(object sender, EventArgs e)
+		{
+			_modulesBar.Height = _mainLayout.ClientSize.Height;
+			_rightLayout.Height = _mainLayout.ClientSize.Height;
+			
+			UpdateMainLayoutSize();
+		}
+		
+		private void ModulesBarExpandedChanged(object sender, EventArgs e)
+		{
+			UpdateMainLayoutSize();
+		}
+		
+		private void UpdateMainLayoutSize(){
+			_rightLayout.Width = _mainLayout.ClientSize.Width - 
+				_modulesBar.Width ;
 		}
 	}
 }

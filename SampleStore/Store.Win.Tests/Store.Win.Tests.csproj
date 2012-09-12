@@ -30,6 +30,9 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CG.Controls.Grid, Version=1.4.2.0, Culture=neutral, PublicKeyToken=6f0398c71764ce9e">
+      <HintPath>..\..\libs\CG.Controls.Grid.dll</HintPath>
+    </Reference>
     <Reference Include="NLipsum.Core">
       <HintPath>..\libs\NLipsum.Core.dll</HintPath>
     </Reference>
@@ -46,12 +49,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="VIBlend.WinForms.Controls, Version=9.0.0.0, Culture=neutral, PublicKeyToken=6feea38fef5ea0cf">
-      <HintPath>..\..\..\..\..\..\Program Files\VIBlend\Windows Forms Controls v.9.0.0.0\VIBlend.WinForms.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="VIBlend.WinForms.Utilities">
-      <HintPath>..\libs\VIBlend.WinForms.Utilities.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
