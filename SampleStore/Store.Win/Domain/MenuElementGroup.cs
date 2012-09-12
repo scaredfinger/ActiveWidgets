@@ -8,7 +8,7 @@ namespace Store.Domain
 	/// <summary>
 	/// Description of ModuleMenu.
 	/// </summary>
-	public class ModuleMenu : IModuleMenu
+	public class MenuElementGroup : IMenuElementGroup
 	{
 		public string Caption { get ; set ; }
 		

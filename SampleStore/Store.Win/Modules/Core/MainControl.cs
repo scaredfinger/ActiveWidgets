@@ -32,10 +32,10 @@ namespace Store.Modules.Core
 		public void SetViewModel(MainViewModel model)
 		{
 			model.ModulesMenu
-				.ForEach(x => CreateModuleOption((ModuleMenu)x));
+				.ForEach(x => CreateModuleOption((MenuElementGroup)x));
 		}
 		
-		public void CreateModuleOption(ModuleMenu moduleMenu)
+		public void CreateModuleOption(MenuElementGroup moduleMenu)
 		{
 			var groupImage = moduleMenu.Glyph.Medium ;
 			var item = new vNavPaneItem

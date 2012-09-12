@@ -40,7 +40,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\IModuleMenu.cs" />
+    <Compile Include="Domain\IMenuElementGroup.cs" />
     <Compile Include="Modules\Core\MainViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

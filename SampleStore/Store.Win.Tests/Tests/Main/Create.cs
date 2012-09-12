@@ -10,13 +10,13 @@ namespace Store.Win.Tests.Tests.Main
 	/// <summary>
 	/// Description of Create.
 	/// </summary>
-	public class Create : Test
+	public class Create : UiTest
 	{		
 		public override void Run()
 		{
-			var list = new List<ModuleMenu>();
+			var list = new List<MenuElementGroup>();
 			for(var i = 0; i < 5; i ++)
-				list.Add(new ModuleMenu	
+				list.Add(new MenuElementGroup	
 				{
 				         	Caption = Random.Name(),
 				         	Tooltip = Random.Sentence(),
@@ -26,7 +26,7 @@ namespace Store.Win.Tests.Tests.Main
 			var mainControl = new MainControl();
 			mainControl.SetViewModel(
 				new MainViewModel{
-					ModulesMenu = list.Cast<IModuleMenu>()
+					ModulesMenu = list.Cast<IMenuElementGroup>()
 				});
 			
 			mainControl.ShowDialog();

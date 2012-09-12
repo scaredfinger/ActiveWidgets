@@ -10,6 +10,6 @@ namespace Store.Modules.Core
 	/// </summary>
 	public class MainViewModel
 	{
-		public IEnumerable<IModuleMenu> ModulesMenu { get; set; }
+		public IEnumerable<IMenuElementGroup> ModulesMenu { get; set; }
 	}
 }

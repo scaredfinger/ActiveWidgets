@@ -58,6 +58,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Units\Services\ServiceBusFixture.cs" />
     <Compile Include="Units\SupervisorFixture.cs" />
+    <Compile Include="Units\Utils\AllTypesFixture.cs" />
     <Compile Include="Units\Utils\ForEachExtensionFixture.cs" />
     <Compile Include="Units\Utils\RenderTextExtensionFixture.cs" />
   </ItemGroup>

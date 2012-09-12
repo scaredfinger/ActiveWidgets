@@ -79,7 +79,7 @@
       <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Tests\Main\Create.cs" />
-    <Compile Include="Tests\Test.cs" />
+    <Compile Include="Tests\UiTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\ActiveWidgets\ActiveWidgets.csproj">

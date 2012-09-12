@@ -51,7 +51,7 @@
     <Compile Include="Controls\Glyph.cs" />
     <Compile Include="Controls\MenuElement.cs" />
     <Compile Include="Controls\PageControl.cs" />
-    <Compile Include="Domain\ModuleMenu.cs" />
+    <Compile Include="Domain\MenuElementGroup.cs" />
     <Compile Include="Modules\Core\MainControl.cs" />
     <Compile Include="Modules\Core\MainControl.Designer.cs">
       <DependentUpon>MainControl.cs</DependentUpon>

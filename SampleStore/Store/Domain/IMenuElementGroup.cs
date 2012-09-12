@@ -5,9 +5,9 @@ using ActiveWidgets.Controls;
 namespace Store.Domain
 {
 	/// <summary>
-	/// Holds information about a module menu
+	/// Holds information about a set of menu elements
 	/// </summary>
-	public interface IModuleMenu
+	public interface IMenuElementGroup
 	{
 		/// <summary>
 		/// Gets or sets the caption
