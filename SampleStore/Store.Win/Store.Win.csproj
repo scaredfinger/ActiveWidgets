@@ -53,13 +53,10 @@
   <ItemGroup>
     <Compile Include="Controls\Glyph.cs" />
     <Compile Include="Controls\MenuElement.cs" />
-    <Compile Include="Controls\PageControl.cs" />
-    <Compile Include="Domain\MenuElementGroup.cs" />
-    <Compile Include="Modules\Core\MainControl.cs" />
     <Compile Include="Controls\PageControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Domain\ModuleMenu.cs" />
+    <Compile Include="Domain\MenuElementGroup.cs" />
     <Compile Include="Modules\Core\MainControl.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-
-using ActiveWidgetf.Utils;
+using ActiveWidgets.Utils;
 using NUnit.Framework;
 
 namespace ActiveWidgets.Units.Utils

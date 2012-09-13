@@ -42,6 +42,7 @@ namespace ActiveWidgets.Units.Services
 		public void SubscribeTo_sets_more_than_one_function()
 		{
 			var called = 0 ;
+
 			_bus.SubscribeTo<Message>(x => called |= 1);
 			_bus.SubscribeTo<Message>(x => called |= 2);
 			_bus.SubscribeTo<Message>(x => called |= 4);

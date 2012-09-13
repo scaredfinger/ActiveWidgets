@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace ActiveWidgetf.Utils
+namespace ActiveWidgets.Utils
 {
     /// <summary>
     /// Allow access to type collections available in the system.
     /// </summary>
     /// <remarks>
-    /// This type could be used to get type collections needed for other methods. Like registering types in 
-    /// a service locator or <see cref="IComponentContainer">IoC container</see>. Since the collections 
-    /// returned are just enumerables they could be filtered event more using Linq.
+    /// This type could be used to get type collections needed for other methods.
     /// </remarks>
     /// <code>
     /// var allAbstractClasses = AllTypes.InCurrentAssembly().Where(x => x.IsAbstract);

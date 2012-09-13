@@ -15,9 +15,9 @@ namespace ActiveWidgets.Menus
     /// 
     /// To register menu items create a Bootstrap with a dependency to this type:
     /// <code>
-    /// public class SomeStoryBootstrap
+    /// public class SomeBootstrap
     /// {
-    ///     public SomeStoryBootstrap(IMenuFor&lt;SomeStorySupervisor&gt; menu)
+    ///     public SomeBootstrap(IMenuFor&lt;SomeStorySupervisor&gt; menu)
     ///     {
     ///         menu.Register&lt;CreateNewSupervisor&gt;();
     ///         menu.Register&lt;DeleteCurrentSupervisor&gt;();
