@@ -12,11 +12,16 @@ using Store.Win.Controls;
 
 namespace Store.Modules.Core
 {
-	/// <summary>
+    public interface IMainControl : IElement
+    {
+        void SetViewModel(MainViewModel model);
+    }
+
+    /// <summary>
 	/// Description of Main.
 	/// </summary>
-	public partial class MainControl : ExForm, IElement
-	{
+	public partial class MainControl : ExForm, IMainControl
+    {
 		public MainControl()
 		{
 			InitializeComponent();
@@ -52,7 +57,7 @@ namespace Store.Modules.Core
                 .ForEach(AddToolbarMenu);
 	    }
 
-	    public void AddGroupToModulesBar(MenuElementGroup moduleMenu)
+	    private void AddGroupToModulesBar(MenuElementGroup moduleMenu)
 		{
 			var groupImage = moduleMenu.Glyph.Medium ;
 			var panel = NewNavigationPanel(moduleMenu, groupImage);
