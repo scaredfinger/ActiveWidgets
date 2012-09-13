@@ -46,6 +46,10 @@ namespace Store.Modules.Core
             model.TopMenu
                 .OfType<MenuElementGroup>()
                 .ForEach(AddToTopMenu);
+
+            model.Toolbar
+                .OfType<MenuElement>()
+                .ForEach(AddToolbarMenu);
 	    }
 
 	    public void AddGroupToModulesBar(MenuElementGroup moduleMenu)
@@ -116,6 +120,12 @@ namespace Store.Modules.Core
 	    {
 	        menu.DropDownItems.Add(menuElement.Caption, menuElement.Glyph.Small);
 	    }
+
+        private void AddToolbarMenu(MenuElement menuElement)
+        {
+            var item = _toolbar.Items.Add("", menuElement.Glyph.Medium);
+            item.ToolTipText = menuElement.Tooltip;
+        }
 
 	    private void MainLayoutResized(object sender, EventArgs e)
 		{

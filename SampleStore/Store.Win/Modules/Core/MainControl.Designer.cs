@@ -68,6 +68,7 @@ namespace Store.Modules.Core
             // 
             this._toolbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
             this._toolbar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this._toolbar.ImageScalingSize = new System.Drawing.Size(24, 24);
             this._toolbar.Location = new System.Drawing.Point(0, 24);
             this._toolbar.Name = "_toolbar";
             this._toolbar.Size = new System.Drawing.Size(569, 25);

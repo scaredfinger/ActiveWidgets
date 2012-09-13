@@ -18,12 +18,12 @@ namespace Store.Win.Tests.Tests
 	                             Caption = Random.Name(),
 	                             Tooltip = Random.Sentence(),
 	                             Glyph = Random.Glyph(),
-	                             Options = CreateRandomSubMenu()
+	                             Options = CreateMenuElements()
 	                         });
 	        return list;
 	    }
 
-	    private static IEnumerable<IMenuElement> CreateRandomSubMenu()
+	    protected static IEnumerable<IMenuElement> CreateMenuElements()
 	    {
 	        var list = new List<IMenuElement>();
 

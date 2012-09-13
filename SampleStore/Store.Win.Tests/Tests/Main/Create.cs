@@ -13,7 +13,8 @@ namespace Store.Win.Tests.Tests.Main
 			mainControl.SetViewModel(
 				new MainViewModel{
 					ModulesMenu = CreateMenuElementGroup(),
-                    TopMenu = CreateMenuElementGroup()
+                    TopMenu = CreateMenuElementGroup(),
+                    Toolbar = CreateMenuElements()
 				});
 			
 			mainControl.ShowDialog();
