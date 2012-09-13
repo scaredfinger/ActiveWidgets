@@ -37,6 +37,7 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -51,6 +52,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\ContentHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ContentHeader.Designer.cs">
+      <DependentUpon>ContentHeader.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Glyph.cs" />
     <Compile Include="Controls\MenuElement.cs" />
     <Compile Include="Controls\PageControl.cs">
@@ -93,6 +100,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Controls\ContentHeader.resx">
+      <DependentUpon>ContentHeader.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\Core\MainControl.resx">
       <DependentUpon>MainControl.cs</DependentUpon>
     </EmbeddedResource>
