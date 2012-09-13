@@ -1,6 +1,4 @@
-﻿
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Store.Domain;
 
 namespace Store.Modules.Core
@@ -10,6 +8,7 @@ namespace Store.Modules.Core
 	/// </summary>
 	public class MainViewModel
 	{
-		public IEnumerable<IMenuElementGroup> ModulesMenu { get; set; }
+        public IEnumerable<IMenuElementGroup> TopMenu { get; set; }
+	    public IEnumerable<IMenuElementGroup> ModulesMenu { get; set; }
 	}
 }

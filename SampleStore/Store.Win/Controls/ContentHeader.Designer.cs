@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this._content = new CG.Controls.Misc.RoundedPanel(this.components);
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this._tableLayout = new System.Windows.Forms.TableLayoutPanel();
             this._icon = new System.Windows.Forms.PictureBox();
             this._title = new CG.Controls.Grid.Text.ExLabel();
             this._content.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this._tableLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._icon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +44,7 @@
             this._content.BorderColor = System.Drawing.Color.SteelBlue;
             this._content.BorderWidth = 1;
             this._content.ColorPreset = CG.Controls.Common.ColorPresetType.Blue;
-            this._content.Controls.Add(this.tableLayoutPanel1);
+            this._content.Controls.Add(this._tableLayout);
             this._content.CornerRadiusLeftBottom = 20;
             this._content.CornerRadiusLeftTop = 20;
             this._content.CornerRadiusRightBottom = 20;
@@ -65,20 +65,20 @@
             this._content.TextBackColor = System.Drawing.SystemColors.Control;
             this._content.TextColor = System.Drawing.Color.Black;
             // 
-            // tableLayoutPanel1
+            // _tableLayout
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this._icon, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this._title, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(784, 117);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this._tableLayout.ColumnCount = 2;
+            this._tableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
+            this._tableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this._tableLayout.Controls.Add(this._icon, 0, 0);
+            this._tableLayout.Controls.Add(this._title, 1, 0);
+            this._tableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._tableLayout.Location = new System.Drawing.Point(0, 0);
+            this._tableLayout.Name = "_tableLayout";
+            this._tableLayout.RowCount = 1;
+            this._tableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this._tableLayout.Size = new System.Drawing.Size(784, 117);
+            this._tableLayout.TabIndex = 0;
             // 
             // _icon
             // 
@@ -92,15 +92,16 @@
             // 
             // _title
             // 
-            this._title.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this._title.AutoSize = true;
+            this._title.Dock = System.Windows.Forms.DockStyle.Fill;
             this._title.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._title.Location = new System.Drawing.Point(67, 27);
+            this._title.Location = new System.Drawing.Point(67, 0);
             this._title.Name = "_title";
             this._title.RenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-            this._title.Size = new System.Drawing.Size(591, 63);
+            this._title.Size = new System.Drawing.Size(714, 117);
             this._title.TabIndex = 1;
             this._title.Text = "Welcome Jurassic Park";
+            this._title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ContentHeader
             // 
@@ -111,8 +112,8 @@
             this.Name = "ContentHeader";
             this.Size = new System.Drawing.Size(784, 117);
             this._content.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this._tableLayout.ResumeLayout(false);
+            this._tableLayout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this._icon)).EndInit();
             this.ResumeLayout(false);
 
@@ -121,7 +122,7 @@
         #endregion
 
         private CG.Controls.Misc.RoundedPanel _content;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel _tableLayout;
         private System.Windows.Forms.PictureBox _icon;
         private CG.Controls.Grid.Text.ExLabel _title;
     }

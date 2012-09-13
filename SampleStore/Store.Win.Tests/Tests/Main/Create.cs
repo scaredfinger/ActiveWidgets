@@ -1,7 +1,4 @@
-﻿using System.Linq;
-using System.Collections.Generic;
-using Store.Domain;
-using Store.Modules.Core;
+﻿using Store.Modules.Core;
 
 namespace Store.Win.Tests.Tests.Main
 {
@@ -12,19 +9,11 @@ namespace Store.Win.Tests.Tests.Main
 	{		
 		public override void Run()
 		{
-			var list = new List<MenuElementGroup>();
-			for(var i = 0; i < 5; i ++)
-				list.Add(new MenuElementGroup	
-				{
-				         	Caption = Random.Name(),
-				         	Tooltip = Random.Sentence(),
-				         	Glyph = Random.Glyph(),
-				});
-			
-			var mainControl = new MainControl();
+		    var mainControl = new MainControl();
 			mainControl.SetViewModel(
 				new MainViewModel{
-					ModulesMenu = list.Cast<IMenuElementGroup>()
+					ModulesMenu = CreateMenuElementGroup(),
+                    TopMenu = CreateMenuElementGroup()
 				});
 			
 			mainControl.ShowDialog();

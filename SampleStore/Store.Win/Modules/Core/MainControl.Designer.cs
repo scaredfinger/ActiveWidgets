@@ -36,7 +36,10 @@ namespace Store.Modules.Core
             this._rightLayout = new System.Windows.Forms.TableLayoutPanel();
             this._modulesBar = new CG.Controls.NavigationBar.ExNavigationBar();
             this._mainLayout = new System.Windows.Forms.FlowLayoutPanel();
+            this._fixedText = new System.Windows.Forms.ToolStripStatusLabel();
+            this._flashNotifications = new System.Windows.Forms.ToolStripStatusLabel();
             this.contentHeader1 = new Store.Controls.ContentHeader();
+            this._status.SuspendLayout();
             this._rightLayout.SuspendLayout();
             this._mainLayout.SuspendLayout();
             this.SuspendLayout();
@@ -44,6 +47,9 @@ namespace Store.Modules.Core
             // _status
             // 
             this._status.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
+            this._status.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._fixedText,
+            this._flashNotifications});
             this._status.Location = new System.Drawing.Point(0, 385);
             this._status.Name = "_status";
             this._status.Size = new System.Drawing.Size(569, 22);
@@ -112,6 +118,19 @@ namespace Store.Modules.Core
             this._mainLayout.WrapContents = false;
             this._mainLayout.SizeChanged += new System.EventHandler(this.MainLayoutResized);
             // 
+            // _fixedText
+            // 
+            this._fixedText.Name = "_fixedText";
+            this._fixedText.Size = new System.Drawing.Size(67, 17);
+            this._fixedText.Text = "[Fixed Text]";
+            // 
+            // _flashNotifications
+            // 
+            this._flashNotifications.Name = "_flashNotifications";
+            this._flashNotifications.Size = new System.Drawing.Size(113, 17);
+            this._flashNotifications.Text = "[Flash Notifications]";
+            this._flashNotifications.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // contentHeader1
             // 
             this.contentHeader1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -133,6 +152,8 @@ namespace Store.Modules.Core
             this.MainMenuStrip = this._topMenu;
             this.Name = "MainControl";
             this.Text = "Main";
+            this._status.ResumeLayout(false);
+            this._status.PerformLayout();
             this._rightLayout.ResumeLayout(false);
             this._mainLayout.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -146,5 +167,7 @@ namespace Store.Modules.Core
 		private System.Windows.Forms.MenuStrip _topMenu;
 		private System.Windows.Forms.StatusStrip _status;
         private Controls.ContentHeader contentHeader1;
+        private System.Windows.Forms.ToolStripStatusLabel _fixedText;
+        private System.Windows.Forms.ToolStripStatusLabel _flashNotifications;
 	}
 }
