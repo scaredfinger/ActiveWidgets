@@ -33,6 +33,9 @@
     <Reference Include="CG.Controls.Grid, Version=1.4.2.0, Culture=neutral, PublicKeyToken=6f0398c71764ce9e">
       <HintPath>..\..\libs\CG.Controls.Grid.dll</HintPath>
     </Reference>
+    <Reference Include="Moq">
+      <HintPath>..\..\libs\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="NLipsum.Core">
       <HintPath>..\..\libs\NLipsum.Core.dll</HintPath>
     </Reference>
@@ -87,6 +90,7 @@
       <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Tests\Main\Create.cs" />
+    <Compile Include="Tests\MenuItem\MenuElementFixture.cs" />
     <Compile Include="Tests\MenuItem\MenuElementGroupFixture.cs" />
     <Compile Include="Tests\UiTest.cs" />
   </ItemGroup>

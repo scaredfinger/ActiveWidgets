@@ -24,23 +24,30 @@ namespace Store.Domain
         /// Adds currrent element group to specified menu strip
         /// </summary>
         /// <param name="mainMenu"></param>
-	    public void AddTo(MenuStrip mainMenu)
+	    public virtual void AddTo(MenuStrip mainMenu)
         {
-            var menu = new ToolStripMenuItem(Caption);
-            if (Glyph != null)
-                menu.Image = Glyph.Small;
-            menu.ToolTipText = Tooltip;
+            var menuItem = NewMenuItem();
+            mainMenu.Items.Add(menuItem);
 
-            mainMenu.Items.Add(menu);
+            CreateItemsForOptions(menuItem);
+        }
 
-            Options
-                .OfType<MenuElement>()
-                .ForEach(element => AddToMenu(element, menu));
-        }
-        private static void AddToMenu(MenuElement menuElement, ToolStripDropDownItem menu)
-        {
-            var item = menu.DropDownItems.Add(menuElement.Caption, menuElement.Glyph.Small);
-            item.ToolTipText = menuElement.Tooltip;
-        }
+	    private ToolStripMenuItem NewMenuItem()
+	    {
+	        return new ToolStripMenuItem(Caption)
+	                   {
+	                       Image = Glyph == null ? null : Glyph.Small, 
+                           ToolTipText = Tooltip
+	                   };
+	    }
+
+	    private void CreateItemsForOptions(ToolStripMenuItem menuItem)
+	    {
+	        if (Options == null) return;
+
+	        Options
+	            .OfType<MenuElement>()
+                .ForEach(element => element.AddTo(menuItem));
+	    }
 	}
 }

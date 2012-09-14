@@ -12,7 +12,7 @@ namespace Store.Win.Tests.Tests
 	    protected static IEnumerable<IMenuElementGroup> CreateMenuElementGroup()
 	    {
 	        var list = new List<IMenuElementGroup>();
-	        for (var i = 0; i < 5; i ++)
+	        for (var i = 0; i < 3 + Random.Int(5); i ++)
 	            list.Add(new MenuElementGroup
 	                         {
 	                             Caption = Random.Name(),
@@ -27,7 +27,7 @@ namespace Store.Win.Tests.Tests
 	    {
 	        var list = new List<IMenuElement>();
 
-	        for(var i = 0; i < 10; i++)
+	        for(var i = 0; i < 5 + Random.Int(10); i++)
 	            list.Add(new MenuElement(Random.Name(), Random.Sentence(), Random.Glyph()));
 
 	        return list;

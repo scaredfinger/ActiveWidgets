@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 using ActiveWidgets.Controls;
 
 namespace Store.Controls
@@ -51,7 +52,7 @@ namespace Store.Controls
 		{
 			
 		}
-		
+        
         /// <summary>
         /// Notifies the item has been actioned, e.g. Clicked
         /// </summary>
@@ -62,5 +63,13 @@ namespace Store.Controls
 			if (Action != null)
 				Action(this, EventArgs.Empty);
 		}
+
+	    public virtual void AddTo(ToolStripMenuItem subMenu)
+	    {
+	        var item = subMenu.DropDownItems.Add(Caption);
+
+	        item.ToolTipText = Tooltip;
+	        item.Image = Glyph == null ? null : Glyph.Small;
+	    }
 	}
 }

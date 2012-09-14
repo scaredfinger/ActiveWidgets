@@ -103,22 +103,8 @@ namespace Store.Modules.Core
 
         private void AddToTopMenu(MenuElementGroup topMenu)
         {
-            var menu = new ToolStripMenuItem(topMenu.Caption);
-            if (topMenu.Glyph != null)
-                menu.Image = topMenu.Glyph.Small;
-            menu.ToolTipText = topMenu.Tooltip;
-
-            _topMenu.Items.Add(menu);
-
-            topMenu.Options
-                .OfType<MenuElement>()
-                .ForEach(x => AddToMenu(x, menu));
+            topMenu.AddTo(_topMenu);
         }
-
-	    private void AddToMenu(MenuElement menuElement, ToolStripMenuItem menu)
-	    {
-	        menu.DropDownItems.Add(menuElement.Caption, menuElement.Glyph.Small);
-	    }
 
         private void AddToolbarMenu(MenuElement menuElement)
         {
