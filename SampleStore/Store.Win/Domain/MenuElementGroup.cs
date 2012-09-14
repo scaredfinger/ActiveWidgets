@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+
 using ActiveWidgets.Controls;
 using ActiveWidgets.Utils;
+using CG.Controls.NavigationBar;
 using Store.Controls;
 
 namespace Store.Domain
@@ -48,6 +50,16 @@ namespace Store.Domain
 	        Options
 	            .OfType<MenuElement>()
                 .ForEach(element => element.AddTo(menuItem));
+	    }
+	    
+	    public void AddTo(ExNavigationBar bar)
+	    {
+	    	var panel = new ExNavigationPanel
+	    					{
+	    						Text = Caption,
+	    						PanelImage = Glyph == null ? null : Glyph.Medium
+	    					};
+	    	bar.AddPanel(panel);
 	    }
 	}
 }
