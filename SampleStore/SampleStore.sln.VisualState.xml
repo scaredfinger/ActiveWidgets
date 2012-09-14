@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
   <TopNode>[0-1000]C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\SampleStore\SampleStore.sln</TopNode>
-  <SelectedNode>[0-1000]C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\SampleStore\SampleStore.sln</SelectedNode>
+  <SelectedNode>[0-1061]PfGrid.Boundaries.NavigationBarFixture</SelectedNode>
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
     <Node UniqueName="[0-1000]C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\SampleStore\SampleStore.sln" Expanded="true" />
-    <Node UniqueName="[0-1029]C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\ActiveWidgets.Tests\bin\Debug\ActiveWidgets.Tests.dll" Expanded="true" />
-    <Node UniqueName="[0-1030]ActiveWidgets" Expanded="true" />
-    <Node UniqueName="[0-1031]ActiveWidgets.Units" Expanded="true" />
-    <Node UniqueName="[0-1032]ActiveWidgets.Units.Menus" Expanded="true" />
-    <Node UniqueName="[0-1002]ActiveWidgets.Units.Menus.MenuForFixture" Expanded="true" />
-    <Node UniqueName="[0-1006]ActiveWidgets.Units.Menus.MenuWhenActiveFixture" Expanded="true" />
-    <Node UniqueName="[0-1033]ActiveWidgets.Units.Services" Expanded="true" />
-    <Node UniqueName="[0-1015]ActiveWidgets.Units.Services.ServiceBusFixture" Expanded="true" />
-    <Node UniqueName="[0-1034]ActiveWidgets.Units.Utils" Expanded="true" />
-    <Node UniqueName="[0-1024]ActiveWidgets.Units.Utils.ForEachExtensionFixture" Expanded="true" />
-    <Node UniqueName="[0-1027]ActiveWidgets.Units.Utils.RenderTextExtensionFixture" Expanded="true" />
-    <Node UniqueName="[0-1019]ActiveWidgets.Units.WidgetFixture" Expanded="true" />
+    <Node UniqueName="[0-1034]C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\ActiveWidgets.Tests\bin\Debug\ActiveWidgets.Tests.dll" Expanded="true" />
+    <Node UniqueName="[0-1035]ActiveWidgets" Expanded="true" />
+    <Node UniqueName="[0-1036]ActiveWidgets.Tests" Expanded="true" />
+    <Node UniqueName="[0-1037]ActiveWidgets.Tests.Units" Expanded="true" />
+    <Node UniqueName="[0-1038]ActiveWidgets.Tests.Units.Menus" Expanded="true" />
+    <Node UniqueName="[0-1039]ActiveWidgets.Tests.Units.Services" Expanded="true" />
+    <Node UniqueName="[0-1040]ActiveWidgets.Tests.Units.Utils" Expanded="true" />
+    <Node UniqueName="[0-1055]C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\SampleStore\Store.Win.Tests\bin\Debug\Store.Win.Tests.exe" Expanded="true" />
+    <Node UniqueName="[0-1056]Store" Expanded="true" />
+    <Node UniqueName="[0-1057]Store.Win" Expanded="true" />
+    <Node UniqueName="[0-1058]Store.Win.Tests" Expanded="true" />
+    <Node UniqueName="[0-1059]Store.Win.Tests.Tests" Expanded="true" />
+    <Node UniqueName="[0-1060]Store.Win.Tests.Tests.MenuItem" Expanded="true" />
+    <Node UniqueName="[0-1048]Store.Win.Tests.Tests.MenuItem.MenuElementGroupFixture" Expanded="true" />
+    <Node UniqueName="[0-1064]C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\PfGrid.Boundaries\bin\Debug\PfGrid.Boundaries.dll" Expanded="true" />
+    <Node UniqueName="[0-1065]PfGrid" Expanded="true" />
+    <Node UniqueName="[0-1066]PfGrid.Boundaries" Expanded="true" />
+    <Node UniqueName="[0-1061]PfGrid.Boundaries.NavigationBarFixture" Expanded="true" />
   </Nodes>
 </VisualState>
