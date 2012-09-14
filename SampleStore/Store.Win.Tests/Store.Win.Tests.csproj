@@ -36,6 +36,9 @@
     <Reference Include="NLipsum.Core">
       <HintPath>..\..\libs\NLipsum.Core.dll</HintPath>
     </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\libs\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -84,6 +87,7 @@
       <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Tests\Main\Create.cs" />
+    <Compile Include="Tests\MenuItem\MenuElementGroupFixture.cs" />
     <Compile Include="Tests\UiTest.cs" />
   </ItemGroup>
   <ItemGroup>
