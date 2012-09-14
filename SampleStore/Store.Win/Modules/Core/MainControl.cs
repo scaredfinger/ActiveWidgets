@@ -2,23 +2,17 @@
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using ActiveWidgets.Controls;
 using ActiveWidgets.Utils;
 using CG.Controls.Grid.Buttons;
 using CG.Controls.Grid.Forms;
 using CG.Controls.NavigationBar;
+using Store.Controls;
 using Store.Domain;
-using Store.Win.Controls;
 
 namespace Store.Modules.Core
 {
-    public interface IMainControl : IElement
-    {
-        void SetViewModel(MainViewModel model);
-    }
-
     /// <summary>
-	/// Description of Main.
+	/// UI Element implementation for main widget.
 	/// </summary>
 	public partial class MainControl : ExForm, IMainControl
     {

@@ -1,9 +1,8 @@
 using System;
-using ActiveWidgets;
 using ActiveWidgets.Controls;
 using NUnit.Framework;
 
-namespace ActiveWidgets.Units
+namespace ActiveWidgets.Tests.Units
 {
     [TestFixture]
     public class WidgetFixture

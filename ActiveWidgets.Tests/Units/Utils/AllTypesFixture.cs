@@ -5,7 +5,7 @@ using System.Reflection;
 using ActiveWidgets.Utils;
 using NUnit.Framework;
 
-namespace ActiveWidgets.Units.Utils
+namespace ActiveWidgets.Tests.Units.Utils
 {
     [TestFixture]
     public class AllTypesFixture

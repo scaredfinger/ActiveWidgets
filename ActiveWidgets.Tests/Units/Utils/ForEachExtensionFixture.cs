@@ -2,7 +2,7 @@
 using ActiveWidgets.Utils;
 using NUnit.Framework;
 
-namespace ActiveWidgets.Units.Utils
+namespace ActiveWidgets.Tests.Units.Utils
 {
     [TestFixture]
     public class ForEachExtensionFixture

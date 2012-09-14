@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using ActiveWidgets.Controls;
+using Store.Controls;
 using Store.Domain;
-using Store.Win.Controls;
 
 namespace Store.Win.Tests.Tests
 {

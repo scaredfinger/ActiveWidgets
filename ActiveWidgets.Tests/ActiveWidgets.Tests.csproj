@@ -62,13 +62,7 @@
     <Compile Include="Units\Utils\ForEachExtensionFixture.cs" />
     <Compile Include="Units\Utils\RenderTextExtensionFixture.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Domain" />
-    <Folder Include="Units\Menus" />
-    <Folder Include="Units" />
-    <Folder Include="Units\Utils" />
-    <Folder Include="Units\Services" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\ActiveWidgets\ActiveWidgets.csproj">
       <Project>{957E40B7-7029-4856-BA23-6F1E74058332}</Project>

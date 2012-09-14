@@ -1,10 +1,7 @@
-﻿using System;
-using System.Drawing;
-using System.Windows.Forms;
-
+﻿using System.Windows.Forms;
 using Store.Resources;
 
-namespace Store.Win.Controls
+namespace Store.Controls
 {
 	/// <summary>
 	/// Description of PageControl.

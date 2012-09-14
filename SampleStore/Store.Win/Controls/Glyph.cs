@@ -1,7 +1,6 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
 
-namespace Store.Win.Controls
+namespace Store.Controls
 {
 	/// <summary>
 	/// A set of images of different sizes that represent an element

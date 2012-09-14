@@ -1,9 +1,8 @@
-﻿using System;
-using System.Threading;
+﻿using System.Threading;
 using ActiveWidgets.Services;
 using NUnit.Framework;
 
-namespace ActiveWidgets.Units.Services
+namespace ActiveWidgets.Tests.Units.Services
 {	
 	[TestFixture]
 	public class ServiceBusFixture

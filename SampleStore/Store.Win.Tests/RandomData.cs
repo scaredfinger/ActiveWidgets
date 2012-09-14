@@ -6,7 +6,7 @@ using System.Linq;
 using System.Resources;
 
 using NLipsum.Core;
-using Store.Win.Controls;
+using Store.Controls;
 using Store.Win.Tests.Resources;
 using DictionaryEntry = System.Collections.DictionaryEntry;
 using RandomInt = System.Random;

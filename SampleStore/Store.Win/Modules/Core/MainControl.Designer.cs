@@ -1,7 +1,7 @@
 ﻿
 namespace Store.Modules.Core
 {
-	partial class MainControl : IMainControl
+	partial class MainControl
 	{
 		/// <summary>
 		/// Designer variable used to keep track of non-visual components.

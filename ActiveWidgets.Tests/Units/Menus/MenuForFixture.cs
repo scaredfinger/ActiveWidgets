@@ -1,11 +1,9 @@
-using ActiveWidgets;
-using ActiveWidgets.Controls;
 using ActiveWidgets.Menus;
 using ActiveWidgets.Tests.Domain;
 using Moq;
 using NUnit.Framework;
 
-namespace ActiveWidgets.Units.Menus
+namespace ActiveWidgets.Tests.Units.Menus
 {
     [TestFixture]
     public class MenuForFixture

@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Drawing;
-using System.Windows.Forms;
 using ActiveWidgets.Controls;
 
-namespace Store.Win.Controls
+namespace Store.Controls
 {
 	/// <summary>
 	/// Description of Class1.

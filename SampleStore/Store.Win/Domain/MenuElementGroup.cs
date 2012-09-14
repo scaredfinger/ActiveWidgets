@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using ActiveWidgets.Controls;
-using Store.Win.Controls;
+using Store.Controls;
 
 namespace Store.Domain
 {
