@@ -64,6 +64,7 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Domain\MenuElementGroup.cs" />
+    <Compile Include="Modules\Core\IMainControl.cs" />
     <Compile Include="Modules\Core\MainControl.cs">
       <SubType>Form</SubType>
     </Compile>
