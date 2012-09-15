@@ -89,6 +89,7 @@
       <DependentUpon>Icons48.resx</DependentUpon>
       <AutoGen>True</AutoGen>
     </Compile>
+    <Compile Include="Tests\Controls\GlyphExtensionsFixture.cs" />
     <Compile Include="Tests\Controls\MenuElementFixture.cs" />
     <Compile Include="Tests\Controls\MenuElementGroupFixture.cs" />
     <Compile Include="Tests\Controls\StackLayoutUiTest.cs" />

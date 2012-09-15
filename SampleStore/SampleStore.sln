@@ -14,8 +14,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Win", "Store.Win\Stor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Win.Tests", "Store.Win.Tests\Store.Win.Tests.csproj", "{133008EB-21E8-495F-B832-C5BB70117D3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PfGrid.Boundaries", "..\PfGrid.Boundaries\PfGrid.Boundaries.csproj", "{69DD8500-DE16-472C-ABAB-02E482780A74}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -46,9 +44,5 @@ Global
 		{133008EB-21E8-495F-B832-C5BB70117D3D}.Debug|x86.ActiveCfg = Debug|x86
 		{133008EB-21E8-495F-B832-C5BB70117D3D}.Release|x86.Build.0 = Release|x86
 		{133008EB-21E8-495F-B832-C5BB70117D3D}.Release|x86.ActiveCfg = Release|x86
-		{69DD8500-DE16-472C-ABAB-02E482780A74}.Debug|x86.Build.0 = Debug|x86
-		{69DD8500-DE16-472C-ABAB-02E482780A74}.Debug|x86.ActiveCfg = Debug|x86
-		{69DD8500-DE16-472C-ABAB-02E482780A74}.Release|x86.Build.0 = Release|x86
-		{69DD8500-DE16-472C-ABAB-02E482780A74}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 EndGlobal

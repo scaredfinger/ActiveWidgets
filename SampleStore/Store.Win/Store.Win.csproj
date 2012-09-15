@@ -52,6 +52,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\GlyphExtensions.cs" />
     <Compile Include="Controls\StackLayoutEngine.cs" />
     <Compile Include="Controls\StackPanel.cs" />
     <Compile Include="Controls\ContentHeader.cs">
