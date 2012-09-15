@@ -121,7 +121,7 @@ namespace Store.Controls
 	    	{
 	    		Text = Caption,
 	    		ToolTipText = Tooltip,
-	    		Image = Glyph.GetSmall()
+	    		Image = Glyph.GetMedium()
 	    	};
 	    	
 	    	toolbar.Items.Add(item);

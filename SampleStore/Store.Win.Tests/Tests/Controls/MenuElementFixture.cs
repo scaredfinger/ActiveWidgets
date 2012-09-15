@@ -108,7 +108,7 @@ namespace Store.Win.Tests.Tests.MenuItem
         	
         	Assert.That(item.Text, Is.EqualTo(ElementCaption));
         	Assert.That(item.ToolTipText, Is.EqualTo(ElementTooltip));
-        	Assert.That(item.Image, Is.EqualTo(ElementGlyph.Small));
+        	Assert.That(item.Image, Is.EqualTo(ElementGlyph.Medium));
         }
         
         [Test]
