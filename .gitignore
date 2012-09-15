@@ -31,8 +31,8 @@ local.properties
 #################
 ## NUnit
 #################
-[Tt]est[Rr]results.xml
-*.[Vv]isual[Ss]tate.xml
+TestResult.xml
+*.VisualState.xml
 
 #################
 ## Visual Studio
