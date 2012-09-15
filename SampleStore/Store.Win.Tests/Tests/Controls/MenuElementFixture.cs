@@ -28,6 +28,14 @@ namespace Store.Win.Tests.Tests.MenuItem
 
 			_element = new MenuElement(ElementCaption, ElementTooltip, ElementGlyph);
 		}
+		
+		[Test]
+		public void Can_create_with_no_arguments()
+		{
+			var element = new MenuElement();
+			
+			Assert.That(element, Is.Not.Null);
+		}
 
 		[Test]
 		public void AddTo_adds_an_element_to_menu()
