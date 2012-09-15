@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using ActiveWidgets.Controls;
+using CG.Controls.NavigationBar;
 
 namespace Store.Controls
 {
@@ -70,6 +71,11 @@ namespace Store.Controls
 
 	        item.ToolTipText = Tooltip;
 	        item.Image = Glyph == null ? null : Glyph.Small;
+	    }
+	    
+	    public virtual void AddTo(Panel container)
+	    {
+	    	
 	    }
 	}
 }

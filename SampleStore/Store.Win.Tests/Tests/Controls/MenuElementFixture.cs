@@ -55,5 +55,9 @@ namespace Store.Win.Tests.Tests.MenuItem
 
             Assert.That(item.Image, Is.Null);
         }
+        
+        [Test]
+        public void AddTo_sets_a_button_in_panel()
+        {}
     }
 }

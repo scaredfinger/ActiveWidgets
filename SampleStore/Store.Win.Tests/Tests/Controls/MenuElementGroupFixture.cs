@@ -137,5 +137,17 @@ namespace Store.Win.Tests.Tests.MenuItem
         	Assert.DoesNotThrow(() =>
         		new MenuElementGroup().AddTo(_navBar));
         }
+        
+        [Test]
+        public void AddTo_adds_all_options()
+        {
+        	_menuGroup.AddTo(_navBar);
+        	
+        	var navPanel = _navBar.SelectedPanel ;
+        	var flowPanel = navPanel.Controls[0] as Panel;
+        	
+        	_menuItem1.Verify(m => m.AddTo(flowPanel));
+        	_menuItem2.Verify(m => m.AddTo(flowPanel));
+        }
     }
 }

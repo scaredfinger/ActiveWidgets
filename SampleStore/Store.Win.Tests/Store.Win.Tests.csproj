@@ -89,9 +89,10 @@
       <DependentUpon>Icons48.resx</DependentUpon>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Include="Tests\Main\Create.cs" />
-    <Compile Include="Tests\MenuItem\MenuElementFixture.cs" />
-    <Compile Include="Tests\MenuItem\MenuElementGroupFixture.cs" />
+    <Compile Include="Tests\Controls\MenuElementFixture.cs" />
+    <Compile Include="Tests\Controls\MenuElementGroupFixture.cs" />
+    <Compile Include="Tests\Controls\StackLayoutUiTest.cs" />
+    <Compile Include="Tests\Main\CreateMainFormUiTest.cs" />
     <Compile Include="Tests\UiTest.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -134,6 +135,8 @@
       <LastGenOutput>Icons48.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Tests\Controls" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
 </Project>

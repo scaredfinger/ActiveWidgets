@@ -90,14 +90,13 @@ namespace Store.Modules.Core
             flowLayoutPanel.Controls.Add(button);
 	    }
 
-	    private ExButton NewButton(MenuElement menuElement)
+	    private ExHyperlink NewButton(MenuElement menuElement)
 	    {
-	        return new ExButton
+	        return new ExHyperlink
 	                   {
 	                       Width = _modulesBar.ClientSize.Width - 30,
 	                       Text = menuElement.Caption,
-	                       Image = menuElement.Glyph.Small,
-	                       TextAlign = ContentAlignment.MiddleLeft
+	                       Image = menuElement.Glyph.Small
 	                   };
 	    }
 
