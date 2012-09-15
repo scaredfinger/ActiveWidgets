@@ -1,3 +1,4 @@
+using System;
 using System.Windows.Forms;
 using CG.Controls.Grid.Buttons;
 using NUnit.Framework;
@@ -251,6 +252,105 @@ namespace Store.Win.Tests.Tests.MenuItem
 			_element.Enable();
 			
 			Assert.That(hyperLink.Enabled, Is.True);
+		}
+		
+		[Test]
+		public void RemoveFrom_toolbar_removes_the_item()
+		{
+			_element.AddTo(_toolbar);
+			
+			_element.RemoveFrom(_toolbar) ;
+			
+			Assert.That(_toolbar.Items.Count, Is.EqualTo(0));
+		}
+		
+		[Test]
+		public void RemoveFrom_toolbar_throws_if_not_added()
+		{
+			Assert.Throws<ArgumentException>(() =>
+				_element.RemoveFrom(_toolbar));
+		}
+		
+		[Test]
+		public void RemovesFrom_toolbar_removes_the_handler()
+		{
+			_element.AddTo(_toolbar);
+			var item = GetToolbarItem();
+			var actionHasNotBeenTriggered = true ;
+			_element.Action += (s, e) =>
+				actionHasNotBeenTriggered = false;
+			
+			_element.RemoveFrom(_toolbar);
+			
+			item.PerformClick();
+			
+			Assert.That(actionHasNotBeenTriggered);
+		}
+		
+		[Test]
+		public void RemoveFrom_menu_removes_the_item()
+		{
+			_element.AddTo(_menu);
+			
+			_element.RemoveFrom(_menu) ;
+			
+			Assert.That(_menu.DropDownItems.Count, Is.EqualTo(0));
+		}
+		
+		[Test]
+		public void RemoveFrom_menu_throws_if_not_added()
+		{
+			Assert.Throws<ArgumentException>(() =>
+				_element.RemoveFrom(_menu));
+		}
+		
+		[Test]
+		public void RemovesFrom_menu_removes_the_handler()
+		{
+			_element.AddTo(_menu);
+			var item = GetMenuItem();
+			var actionHasNotBeenTriggered = true ;
+			_element.Action += (s, e) =>
+				actionHasNotBeenTriggered = false;
+			
+			_element.RemoveFrom(_menu);
+			
+			item.PerformClick();
+			
+			Assert.That(actionHasNotBeenTriggered);
+		}
+		
+		[Test]
+		public void RemoveFrom_panel_removes_the_item()
+		{
+			_element.AddTo(_panel);
+			
+			_element.RemoveFrom(_panel) ;
+			
+			Assert.That(_panel.Controls.Count, Is.EqualTo(0));
+		}
+		
+		[Test]
+		public void RemoveFrom_panel_throws_if_not_added()
+		{
+			Assert.Throws<ArgumentException>(() =>
+				_element.RemoveFrom(_panel));
+		}
+		
+		[Test]
+		public void RemovesFrom_panel_removes_the_handler()
+		{
+			_element.AddTo(_panel);
+			var item = GetHyperLink();
+			var actionHasNotBeenTriggered = true ;
+			_element.Action += (s, e) =>
+				actionHasNotBeenTriggered = false;
+			
+			_element.RemoveFrom(_panel);
+			
+			item.PerformClick();
+			
+			Assert.That(actionHasNotBeenTriggered);
 		}
 	}
 }

@@ -153,5 +153,44 @@ namespace Store.Controls
 	    	
 	    	toolbar.Items.Add(_toolbarItem);
 	    }
+		
+	    /// <summary>
+	    /// Removes current element from specified toolbar.
+	    /// </summary>
+	    /// <param name="toolbar">Toolbar to remove the element from.</param>
+		public void RemoveFrom(ToolStrip toolbar)
+		{
+			if (! toolbar.Items.Contains(_toolbarItem))	
+				throw new ArgumentException("This element hasn't been added to specified toolbar");
+			
+			_toolbarItem.Click -= ElementClicked;
+			toolbar.Items.Remove(_toolbarItem);
+		}
+		
+	    /// <summary>
+	    /// Removes current element from specified menu.
+	    /// </summary>
+	    /// <param name="menu">Menu to remove the element from.</param>
+		public void RemoveFrom(ToolStripMenuItem menu)
+		{
+			if (! menu.DropDownItems.Contains(_menuItem))
+				throw new ArgumentException("This element hasn't been added to specified menu");
+			
+			_menuItem.Click -= ElementClicked;
+			menu.DropDownItems.Remove(_menuItem);
+		}
+		
+	    /// <summary>
+	    /// Removes current element from specified panel.
+	    /// </summary>
+	    /// <param name="panel">Panel to remove the element from.</param>
+		public void RemoveFrom(Panel panel)
+		{
+			if (! panel.Controls.Contains(_hyperLink))
+				throw new ArgumentException("This element hasn't been added to specified panel");
+			
+			_hyperLink.Click -= ElementClicked;
+			panel.Controls.Remove(_hyperLink);
+		}
 	}
 }
