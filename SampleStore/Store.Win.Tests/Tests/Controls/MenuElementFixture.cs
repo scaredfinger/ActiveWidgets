@@ -352,5 +352,53 @@ namespace Store.Win.Tests.Tests.MenuItem
 			
 			Assert.That(actionHasNotBeenTriggered);
 		}
+		
+		[Test]
+		public void Dispose_removes_toolbar_handler()
+		{
+			_element.AddTo(_toolbar);
+			var item = GetToolbarItem();
+			var actionHasNotBeenTriggered = true ;
+			_element.Action += (s, e) =>
+				actionHasNotBeenTriggered = false;
+			
+			_element.Dispose();
+			
+			item.PerformClick();
+			
+			Assert.That(actionHasNotBeenTriggered);
+		}
+		
+		[Test]
+		public void Dispose_removes_menu_handler()
+		{
+			_element.AddTo(_menu);
+			var item = GetMenuItem();
+			var actionHasNotBeenTriggered = true ;
+			_element.Action += (s, e) =>
+				actionHasNotBeenTriggered = false;
+			
+			_element.Dispose();
+			
+			item.PerformClick();
+			
+			Assert.That(actionHasNotBeenTriggered);		
+		}
+		
+		[Test]
+		public void Dispose_removes_hyperlink_handler()
+		{
+			_element.AddTo(_panel);
+			var item = GetHyperLink();
+			var actionHasNotBeenTriggered = true ;
+			_element.Action += (s, e) =>
+				actionHasNotBeenTriggered = false;
+			
+			_element.Dispose();
+			
+			item.PerformClick();
+			
+			Assert.That(actionHasNotBeenTriggered);		
+		}
 	}
 }

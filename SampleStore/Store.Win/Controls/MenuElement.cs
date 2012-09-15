@@ -15,7 +15,7 @@ namespace Store.Controls
 	/// This is the winforms / GF Grid specific implementation. Use the <see cref="AddTo"/>
 	/// overloads to add a group to different parts of main widget.
 	/// </remarks>
-	public class MenuElement : IMenuElement
+	public class MenuElement : IMenuElement, IDisposable
 	{
 		private ToolStripItem _menuItem ;
 		private ExHyperlink _hyperLink ;
@@ -191,6 +191,19 @@ namespace Store.Controls
 			
 			_hyperLink.Click -= ElementClicked;
 			panel.Controls.Remove(_hyperLink);
+		}
+		
+		/// <summary>
+		/// Disposes current element
+		/// </summary>
+		public void Dispose()
+		{
+			if (_toolbarItem != null)
+				_toolbarItem.Click -= ElementClicked;
+			if (_menuItem != null)
+				_menuItem.Click -= ElementClicked;
+			if (_hyperLink != null)
+				_hyperLink.Click -= ElementClicked;
 		}
 	}
 }
