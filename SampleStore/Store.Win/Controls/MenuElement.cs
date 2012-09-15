@@ -1,27 +1,34 @@
 ﻿using System;
 using System.Windows.Forms;
 using ActiveWidgets.Controls;
+using CG.Controls.Grid.Buttons;
 using CG.Controls.NavigationBar;
+using StackPanel = Store.Controls.StackPanel;
 
 namespace Store.Controls
 {
-	/// <summary>
-	/// Description of Class1.
-	/// </summary>
+    /// <summary>
+    /// Represents an adapter for actual toolbar items. Toolbar items are only known to the 
+    /// ui elements. So we must provide a mechanism to hide them to the application logic layer.
+    /// </summary>
+	/// <remarks>
+	/// This is the winforms / GF Grid specific implementation. Use the <see cref="AddTo"/>
+	/// overloads to add a group to different parts of main widget.
+	/// </remarks>
 	public class MenuElement : IMenuElement
 	{
 		/// <summary>
-		/// Gets the caption for this menu item
+		/// Gets the caption for this menu element.
 		/// </summary>
 		public string Caption { get; private set; }
 		
 		/// <summary>
-		/// Gets the tooltip for this menu item
+		/// Gets the tooltip for this menu element.
 		/// </summary>
 		public string Tooltip { get; private set; }
 		
 		/// <summary>
-		/// Gets the glyph for this menu item
+		/// Gets the glyph for this menu element
 		/// </summary>
 		public Glyph Glyph { get; private set; }
 		
@@ -36,6 +43,14 @@ namespace Store.Controls
 			Caption = caption ;
 			Tooltip = tooltip ;
 			Glyph = glyph ;
+		}
+		
+		/// <summary>
+		/// Creates an instance
+		/// </summary>
+		public MenuElement()
+		{
+		
 		}
 				
         /// <summary>
@@ -65,6 +80,10 @@ namespace Store.Controls
 				Action(this, EventArgs.Empty);
 		}
 
+		/// <summary>
+		/// Adds current element to specified menu item.
+		/// </summary>
+		/// <param name="menu">Menu item to add this group to.</param>
 	    public virtual void AddTo(ToolStripMenuItem subMenu)
 	    {
 	        var item = subMenu.DropDownItems.Add(Caption);
@@ -73,9 +92,22 @@ namespace Store.Controls
 	        item.Image = Glyph == null ? null : Glyph.Small;
 	    }
 	    
+		/// <summary>
+		/// Adds current element as a hyperlink to specified panel. 
+		/// </summary>
+		/// <remarks>
+		/// It is recomended to use automatic layout panels, such as <see cref="FlowLayoutPanel"/> 
+		/// or <see cref="StackPanel"/>.
+		/// </remarks>
+		/// <param name="menu">Panel to add this group to.</param>
 	    public virtual void AddTo(Panel container)
 	    {
-	    	
+	    	var hyperlink = new ExHyperlink
+	    	{
+	    		Text = Caption,
+	    		Image = Glyph == null ? null : Glyph.Small
+	    	};
+	    	container.Controls.Add(hyperlink);
 	    }
 	}
 }

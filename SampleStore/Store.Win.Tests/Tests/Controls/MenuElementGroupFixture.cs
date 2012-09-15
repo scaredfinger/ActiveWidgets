@@ -8,6 +8,8 @@ using NUnit.Framework;
 using Store.Controls;
 using Store.Domain;
 
+using StackPanel=Store.Controls.StackPanel;
+
 namespace Store.Win.Tests.Tests.MenuItem
 {
     [TestFixture]
@@ -24,9 +26,10 @@ namespace Store.Win.Tests.Tests.MenuItem
         private static readonly string Option2Caption = Random.Sentence();
         private static readonly string Option2Tooltip = Random.Sentence();
         private static readonly Glyph Option2Glyph = Random.Glyph();
+        
+        private MenuElementGroup _menuGroup;
 
         private MenuStrip _menuStrip;
-        private MenuElementGroup _menuGroup;
         private ExNavigationBar _navBar;
         private MenuElement[] _options;
         private Mock<MenuElement> _menuItem1;
@@ -144,10 +147,10 @@ namespace Store.Win.Tests.Tests.MenuItem
         	_menuGroup.AddTo(_navBar);
         	
         	var navPanel = _navBar.SelectedPanel ;
-        	var flowPanel = navPanel.Controls[0] as Panel;
+        	var stackPanel = navPanel.Controls[0] as StackPanel;
         	
-        	_menuItem1.Verify(m => m.AddTo(flowPanel));
-        	_menuItem2.Verify(m => m.AddTo(flowPanel));
+        	_menuItem1.Verify(m => m.AddTo(stackPanel));
+        	_menuItem2.Verify(m => m.AddTo(stackPanel));
         }
     }
 }

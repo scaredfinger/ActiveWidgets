@@ -10,26 +10,42 @@ using Store.Controls;
 namespace Store.Domain
 {
 	/// <summary>
-	/// Description of ModuleMenu.
+	/// Holds information about a set of menu elements.
 	/// </summary>
+	/// <remarks>
+	/// This is the winforms / GF Grid specific implementation. Use the <see cref="AddTo"/>
+	/// overloads to add a group to different parts of main widget.
+	/// </remarks>
 	public class MenuElementGroup : IMenuElementGroup
 	{
+		/// <summary>
+		/// Gets or sets the caption.
+		/// </summary>
 		public string Caption { get ; set ; }
 		
+		/// <summary>
+		/// Gets or sets the toolip.
+		/// </summary>
 		public string Tooltip { get ; set; }
 		
+		/// <summary>
+		/// Gets or sets the glyph that represents this set.
+		/// </summary>
 		public Glyph Glyph { get; set; }
 		
+		/// <summary>
+		/// Gets or sets a collection with the menu elements contained in this set.
+		/// </summary>
 		public IEnumerable<IMenuElement> Options { get; set; }
 
 		/// <summary>
-		/// Adds currrent element group to specified menu strip
+		/// Adds current element group to specified menu strip.
 		/// </summary>
-		/// <param name="mainMenu"></param>
-		public virtual void AddTo(MenuStrip mainMenu)
+		/// <param name="menu">Menu strip to add this group to.</param>
+		public virtual void AddTo(MenuStrip menu)
 		{
 			var menuItem = NewMenuItem();
-			mainMenu.Items.Add(menuItem);
+			menu.Items.Add(menuItem);
 
 			CreateItemsForOptions(menuItem);
 		}
@@ -45,40 +61,46 @@ namespace Store.Domain
 
 		private void CreateItemsForOptions(ToolStripMenuItem menuItem)
 		{
-			if (Options == null) return;
-
-			Options
-				.OfType<MenuElement>()
+			MenuElementOptions()
 				.ForEach(element => element.AddTo(menuItem));
 		}
 		
+		private IEnumerable<MenuElement> MenuElementOptions()
+		{
+			return Options == null
+				? new MenuElement[0]
+				: Options.OfType<MenuElement>();
+		}
+		
+		/// <summary>
+		/// Adds current element group to specified navigation bar.
+		/// </summary>
+		/// <param name="bar">Navigation bar to add this group to.</param>
 		public void AddTo(ExNavigationBar bar)
 		{
-			ExNavigationPanel panel = NewNavigationPanel();
-			bar.AddPanel(panel);
+			var container = NewStackPanel();
+			AddContainerToNavBar(container, bar);
 			
-			if (Options == null) return;
-		
-			Options
-				.OfType<MenuElement>()
-				.ForEach(option => option.AddTo(panel.Controls[0] as Panel));
+			MenuElementOptions()
+				.ForEach(option => option.AddTo(container));
 		}
 
-		private ExNavigationPanel NewNavigationPanel()
+		private static StackPanel NewStackPanel()
 		{
-			var result = new ExNavigationPanel {
+			return new StackPanel {
+				Dock = DockStyle.Fill,
+				Padding = new Padding(10)
+			};
+		}
+
+		private void AddContainerToNavBar(StackPanel container, ExNavigationBar bar)
+		{
+			var panel = new ExNavigationPanel {
 				Text = Caption,
 				PanelImage = Glyph == null ? null : Glyph.Medium
 			};
-			
-			var flowPanel = new FlowLayoutPanel{
-				Dock = DockStyle.Fill,
-                Padding = new Padding(10)
-			};
-			
-			result.Controls.Add(flowPanel) ;
-			
-			return result ;
+			bar.AddPanel(panel);
+			panel.Controls.Add(container);
 		}
 	}
 }

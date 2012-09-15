@@ -1,23 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\SampleStore\SampleStore.sln" total="9" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2012-09-14" time="20:51:41">
+<test-results name="C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\SampleStore\SampleStore.sln" total="6" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2012-09-15" time="14:58:41">
   <environment nunit-version="2.6.1.12217" clr-version="2.0.50727.3053" os-version="Microsoft Windows NT 5.1.2600 Service Pack 3" platform="Win32NT" cwd="C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\SampleStore" machine-name="ODETTE" user="Erich" user-domain="ODETTE" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Project" name="C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\SampleStore\SampleStore.sln" executed="True" result="Success" success="True" time="2.344" asserts="0">
+  <test-suite type="Project" name="C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\SampleStore\SampleStore.sln" executed="True" result="Success" success="True" time="2.109" asserts="0">
     <results>
-      <test-suite type="Assembly" name="C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\SampleStore\Store.Win.Tests\bin\Debug\Store.Win.Tests.exe" executed="True" result="Success" success="True" time="2.344" asserts="0">
+      <test-suite type="Assembly" name="C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\SampleStore\Store.Win.Tests\bin\Debug\Store.Win.Tests.exe" executed="True" result="Success" success="True" time="2.109" asserts="0">
         <results>
-          <test-suite type="TestFixture" name="MenuElementGroupFixture" executed="True" result="Success" success="True" time="2.344" asserts="0">
+          <test-suite type="TestFixture" name="MenuElementFixture" executed="True" result="Success" success="True" time="2.109" asserts="0">
             <results>
-              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementGroupFixture.AddTo_adds_a_group_to_nav_bar" executed="True" result="Success" success="True" time="1.813" asserts="1" />
-              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementGroupFixture.AddTo_adds_a_matching_group" executed="True" result="Success" success="True" time="0.016" asserts="2" />
-              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementGroupFixture.AddTo_adds_all_options" executed="True" result="Success" success="True" time="0.063" asserts="0" />
-              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementGroupFixture.AddTo_adds_an_element_matching_menuGroup" executed="True" result="Success" success="True" time="0.000" asserts="3" />
-              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementGroupFixture.AddTo_adds_matching_options" executed="True" result="Success" success="True" time="0.016" asserts="0" />
-              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementGroupFixture.AddTo_adds_one_item_to_menu" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementGroupFixture.AddTo_sets_no_image_if_no_glyph" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementGroupFixture.AddTo_throws_no_exceptions_if_no_glyph" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementGroupFixture.Null_options_is_equivalent_to_empty" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementFixture.AddTo_adds_a_matching_hyperlink" executed="True" result="Success" success="True" time="1.578" asserts="2" />
+              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementFixture.AddTo_adds_an_element_to_menu" executed="True" result="Success" success="True" time="0.109" asserts="1" />
+              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementFixture.AddTo_adds_matching_element_to_menu" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementFixture.AddTo_sets_a_hyperlink_in_panel" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementFixture.AddTo_sets_image_to_null_if_glyph_is_null" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementFixture.AddTo_sets_null_image_if_glyph_is_null" executed="True" result="Success" success="True" time="0.000" asserts="1" />
             </results>
           </test-suite>
         </results>
