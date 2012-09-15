@@ -17,6 +17,8 @@ namespace Store.Controls
 	/// </remarks>
 	public class MenuElement : IMenuElement
 	{
+		private ToolStripItem _menuItem ;
+		
 		/// <summary>
 		/// Gets the caption for this menu element.
 		/// </summary>
@@ -86,10 +88,16 @@ namespace Store.Controls
 		/// <param name="menu">Menu item to add this group to.</param>
 	    public virtual void AddTo(ToolStripMenuItem subMenu)
 	    {
-	        var item = subMenu.DropDownItems.Add(Caption);
+	        _menuItem = subMenu.DropDownItems.Add(Caption);
 
-	        item.ToolTipText = Tooltip;
-	        item.Image = Glyph.GetSmall();
+	        _menuItem.ToolTipText = Tooltip;
+	        _menuItem.Image = Glyph.GetSmall();	        
+	        _menuItem.Click += ElementClicked;
+	    }
+	    
+	    private void ElementClicked(object sender, EventArgs e)
+	    {
+	    	OnAction();
 	    }
 	    
 		/// <summary>
@@ -107,11 +115,12 @@ namespace Store.Controls
 	    		Text = Caption,
 	    		Image = Glyph.GetSmall()
 	    	};
-	    	container.Controls.Add(hyperlink);
+	    	hyperlink.Click += ElementClicked;
+	    	
+	    	container.Controls.Add(hyperlink);	    	
 	    }
 	    
-	    
-		/// <summary>
+	    /// <summary>
 		/// Adds current element to specified toolbar. 
 		/// </summary>
 		/// <param name="menu">Toolbar to add this group to.</param>
@@ -123,6 +132,7 @@ namespace Store.Controls
 	    		ToolTipText = Tooltip,
 	    		Image = Glyph.GetMedium()
 	    	};
+	    	item.Click += ElementClicked;
 	    	
 	    	toolbar.Items.Add(item);
 	    }
