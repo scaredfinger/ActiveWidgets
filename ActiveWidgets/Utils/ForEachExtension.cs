@@ -21,18 +21,5 @@ namespace ActiveWidgets.Utils
             foreach (var element in collection)
                 action(element);
         }
-
-        /// <summary>
-        /// Applies an action to all elements in collection, just like <see cref="List{T}.ForEach"/>
-        /// </summary>
-        /// <typeparam name="TElement"></typeparam>
-        /// <typeparam name="TResult"></typeparam>
-        /// <param name="collection"></param>
-        /// <param name="func"></param>
-        public static void ForEach<TElement, TResult> (this IEnumerable<TElement> collection,
-            Func<TElement, TResult> func)
-        {
-            collection.ForEach(x => { func(x); });
-        }
     }
 }

@@ -24,11 +24,7 @@ namespace ActiveWidgets.Tests.Units.Utils
             var executeWith = new List<int>();
             var elements = new[] {1, 2, 3, 4};
 
-            elements.ForEach(x => 
-            { 
-                executeWith.Add(x);
-                return x;
-            });
+            elements.ForEach(executeWith.Add);
 
             Assert.That(executeWith, Is.EquivalentTo(elements));
         }
