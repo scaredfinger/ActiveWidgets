@@ -54,7 +54,7 @@ namespace Store.Domain
 		{
 			return new ToolStripMenuItem(Caption)
 			{
-				Image = Glyph == null ? null : Glyph.Small,
+				Image = Glyph.GetSmall(),
 				ToolTipText = Tooltip
 			};
 		}
@@ -97,7 +97,7 @@ namespace Store.Domain
 		{
 			var panel = new ExNavigationPanel {
 				Text = Caption,
-				PanelImage = Glyph == null ? null : Glyph.Medium
+				PanelImage = Glyph.GetMedium()
 			};
 			bar.AddPanel(panel);
 			panel.Controls.Add(container);
