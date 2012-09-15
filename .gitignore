@@ -29,10 +29,12 @@ local.properties
 .buildpath
 
 #################
-## NUnit
+## Testing
 #################
 TestResult.xml
 *.VisualState.xml
+coverage.xml
+*.log
 
 #################
 ## Visual Studio
