@@ -63,8 +63,7 @@ namespace Store.Modules.Core
 
         private void AddToolbarMenu(MenuElement menuElement)
         {
-            var item = _toolbar.Items.Add("", menuElement.Glyph.Medium);
-            item.ToolTipText = menuElement.Tooltip;
+        	menuElement.AddTo(_toolbar);
         }
 
 	    private void MainLayoutResized(object sender, EventArgs e)
