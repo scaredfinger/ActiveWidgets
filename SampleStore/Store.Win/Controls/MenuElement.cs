@@ -89,7 +89,7 @@ namespace Store.Controls
 	        var item = subMenu.DropDownItems.Add(Caption);
 
 	        item.ToolTipText = Tooltip;
-	        item.Image = Glyph == null ? null : Glyph.Small;
+	        item.Image = Glyph.GetSmall();
 	    }
 	    
 		/// <summary>
@@ -105,9 +105,26 @@ namespace Store.Controls
 	    	var hyperlink = new ExHyperlink
 	    	{
 	    		Text = Caption,
-	    		Image = Glyph == null ? null : Glyph.Small
+	    		Image = Glyph.GetSmall()
 	    	};
 	    	container.Controls.Add(hyperlink);
+	    }
+	    
+	    
+		/// <summary>
+		/// Adds current element to specified toolbar. 
+		/// </summary>
+		/// <param name="menu">Toolbar to add this group to.</param>
+	    public virtual void AddTo(ToolStrip toolbar)
+	    {
+	    	var item = new ToolStripButton
+	    	{
+	    		Text = Caption,
+	    		ToolTipText = Tooltip,
+	    		Image = Glyph.GetSmall()
+	    	};
+	    	
+	    	toolbar.Items.Add(item);
 	    }
 	}
 }

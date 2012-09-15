@@ -1,18 +1,105 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\SampleStore\SampleStore.sln" total="4" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2012-09-15" time="16:35:18">
+<test-results name="C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\SampleStore\SampleStore.sln" total="47" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2012-09-15" time="16:40:23">
   <environment nunit-version="2.6.1.12217" clr-version="2.0.50727.3053" os-version="Microsoft Windows NT 5.1.2600 Service Pack 3" platform="Win32NT" cwd="C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\SampleStore" machine-name="ODETTE" user="Erich" user-domain="ODETTE" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Project" name="C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\SampleStore\SampleStore.sln" executed="True" result="Success" success="True" time="0.078" asserts="0">
+  <test-suite type="Project" name="C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\SampleStore\SampleStore.sln" executed="True" result="Success" success="True" time="2.297" asserts="0">
     <results>
-      <test-suite type="Assembly" name="C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\SampleStore\Store.Win.Tests\bin\Debug\Store.Win.Tests.exe" executed="True" result="Success" success="True" time="0.063" asserts="0">
+      <test-suite type="Assembly" name="C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\ActiveWidgets\bin\Debug\ActiveWidgets.dll" executed="True" result="Inconclusive" success="False" time="0.000" asserts="0" />
+      <test-suite type="Assembly" name="C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\ActiveWidgets.Tests\bin\Debug\ActiveWidgets.Tests.dll" executed="True" result="Success" success="True" time="1.047" asserts="0">
         <results>
-          <test-suite type="TestFixture" name="GlyphExtensionsFixture" executed="True" result="Success" success="True" time="0.063" asserts="0">
+          <test-suite type="TestFixture" name="MenuForFixture" executed="True" result="Success" success="True" time="0.469" asserts="0">
             <results>
-              <test-case name="Store.Win.Tests.Tests.Controls.GlyphExtensionsFixture.GetLarge_returns_image_if_not_null" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+              <test-case name="ActiveWidgets.Tests.Units.Menus.MenuForFixture.Can_create_instances" executed="True" result="Success" success="True" time="0.359" asserts="1" />
+              <test-case name="ActiveWidgets.Tests.Units.Menus.MenuForFixture.Register_calls_activeMenuItems_Register" executed="True" result="Success" success="True" time="0.063" asserts="0" />
+              <test-case name="ActiveWidgets.Tests.Units.Menus.MenuForFixture.Register_calls_activeMenuItems_Register_generic" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+            </results>
+          </test-suite>
+          <test-suite type="TestFixture" name="MenuWhenActiveFixture" executed="True" result="Success" success="True" time="0.063" asserts="0">
+            <results>
+              <test-case name="ActiveWidgets.Tests.Units.Menus.MenuWhenActiveFixture.Can_create_instances" executed="True" result="Success" success="True" time="0.031" asserts="1" />
+              <test-case name="ActiveWidgets.Tests.Units.Menus.MenuWhenActiveFixture.GetMenuItemsFor_calls_allWidgets_GetSupervisor_if_registered" executed="True" result="Success" success="True" time="0.016" asserts="0" />
+              <test-case name="ActiveWidgets.Tests.Units.Menus.MenuWhenActiveFixture.GetMenuItemsFor_calls_allWidgets_GetSupervisor_if_registered_using_generic" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+              <test-case name="ActiveWidgets.Tests.Units.Menus.MenuWhenActiveFixture.GetMenuItemsFor_generic_returns_allWidgets_GetSupervisor_if_registered" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="ActiveWidgets.Tests.Units.Menus.MenuWhenActiveFixture.GetMenuItemsFor_generic_returns_allWidgets_GetSupervisor_if_registered_using_generic" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+              <test-case name="ActiveWidgets.Tests.Units.Menus.MenuWhenActiveFixture.GetMenuItemsFor_result_starts_empty" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="ActiveWidgets.Tests.Units.Menus.MenuWhenActiveFixture.GetMenuItemsFor_returns_allWidgets_GetSupervisor_if_registered" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="ActiveWidgets.Tests.Units.Menus.MenuWhenActiveFixture.GetMenuItemsFor_returns_allWidgets_GetSupervisor_if_registered_using_generic" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+            </results>
+          </test-suite>
+          <test-suite type="TestFixture" name="ServiceBusFixture" executed="True" result="Success" success="True" time="0.063" asserts="0">
+            <results>
+              <test-case name="ActiveWidgets.Tests.Units.Services.ServiceBusFixture.Can_create_instances" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="ActiveWidgets.Tests.Units.Services.ServiceBusFixture.SubscribeTo_sets_more_than_one_function" executed="True" result="Success" success="True" time="0.063" asserts="1" />
+              <test-case name="ActiveWidgets.Tests.Units.Services.ServiceBusFixture.SubscribeTo_sets_the_function_into_bus" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+            </results>
+          </test-suite>
+          <test-suite type="TestFixture" name="AllTypesFixture" executed="True" result="Success" success="True" time="0.422" asserts="0">
+            <results>
+              <test-case name="ActiveWidgets.Tests.Units.Utils.AllTypesFixture.InAllLoadedAssemblies_returns_all_types_from_all_assemblies" executed="True" result="Success" success="True" time="0.406" asserts="1" />
+              <test-case name="ActiveWidgets.Tests.Units.Utils.AllTypesFixture.InAssemblyNamed_returns_all_types_from_assembly_containing" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+              <test-case name="ActiveWidgets.Tests.Units.Utils.AllTypesFixture.InAssemblyNamed_returns_all_types_from_assembly_containing_generic" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="ActiveWidgets.Tests.Units.Utils.AllTypesFixture.InCurrentAssembly_returns_all_types_from_current_assembly" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+            </results>
+          </test-suite>
+          <test-suite type="TestFixture" name="ForEachExtensionFixture" executed="True" result="Success" success="True" time="0.000" asserts="0">
+            <results>
+              <test-case name="ActiveWidgets.Tests.Units.Utils.ForEachExtensionFixture.ForEach_with_action_executes_function_over_every_element" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="ActiveWidgets.Tests.Units.Utils.ForEachExtensionFixture.ForEach_with_function_executes_function_over_every_element" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+            </results>
+          </test-suite>
+          <test-suite type="TestFixture" name="RenderTextExtensionFixture" executed="True" result="Success" success="True" time="0.016" asserts="0">
+            <results>
+              <test-case name="ActiveWidgets.Tests.Units.Utils.RenderTextExtensionFixture.Renders" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+            </results>
+          </test-suite>
+          <test-suite type="TestFixture" name="WidgetFixture" executed="True" result="Success" success="True" time="0.000" asserts="0">
+            <results>
+              <test-case name="ActiveWidgets.Tests.Units.WidgetFixture.Can_create_instances" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="ActiveWidgets.Tests.Units.WidgetFixture.Constructor_sets_the_control" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="ActiveWidgets.Tests.Units.WidgetFixture.CoupleWith_sets_widget_control_to_parameter" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="ActiveWidgets.Tests.Units.WidgetFixture.Dispose_throws_no_exceptions" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="Assembly" name="C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\SampleStore\Store\bin\Debug\Store.dll" executed="True" result="Inconclusive" success="False" time="0.000" asserts="0" />
+      <test-suite type="Assembly" name="C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\SampleStore\Store.Tests\bin\Debug\Store.Tests.dll" executed="True" result="Inconclusive" success="False" time="0.000" asserts="0" />
+      <test-suite type="Assembly" name="C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\SampleStore\Store.Win\bin\Debug\Store.Win.dll" executed="True" result="Inconclusive" success="False" time="0.000" asserts="0" />
+      <test-suite type="Assembly" name="C:\Documents and Settings\Erich\My Documents\My Projects\ActiveWidgets\SampleStore\Store.Win.Tests\bin\Debug\Store.Win.Tests.exe" executed="True" result="Success" success="True" time="1.219" asserts="0">
+        <results>
+          <test-suite type="TestFixture" name="GlyphExtensionsFixture" executed="True" result="Success" success="True" time="0.000" asserts="0">
+            <results>
+              <test-case name="Store.Win.Tests.Tests.Controls.GlyphExtensionsFixture.GetLarge_returns_image_if_not_null" executed="True" result="Success" success="True" time="0.000" asserts="1" />
               <test-case name="Store.Win.Tests.Tests.Controls.GlyphExtensionsFixture.GetLarge_returns_null_for_null_glyph" executed="True" result="Success" success="True" time="0.000" asserts="1" />
               <test-case name="Store.Win.Tests.Tests.Controls.GlyphExtensionsFixture.GetMedium_returns_image_if_not_null" executed="True" result="Success" success="True" time="0.000" asserts="1" />
               <test-case name="Store.Win.Tests.Tests.Controls.GlyphExtensionsFixture.GetMedium_returns_null_for_null_glyph" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+            </results>
+          </test-suite>
+          <test-suite type="TestFixture" name="MenuElementFixture" executed="True" result="Success" success="True" time="1.109" asserts="0">
+            <results>
+              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementFixture.AddTo_adds_a_matching_hyperlink" executed="True" result="Success" success="True" time="0.547" asserts="2" />
+              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementFixture.AddTo_adds_a_matching_item" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementFixture.AddTo_adds_an_element_to_menu" executed="True" result="Success" success="True" time="0.063" asserts="1" />
+              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementFixture.AddTo_adds_an_item_to_the_tool_strip" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementFixture.AddTo_adds_matching_element_to_menu" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementFixture.AddTo_sets_a_hyperlink_in_panel" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementFixture.AddTo_sets_image_to_null_if_glyph_is_null" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementFixture.AddTo_sets_null_image_glyph_is_null" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementFixture.AddTo_sets_null_image_if_glyph_is_null" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+            </results>
+          </test-suite>
+          <test-suite type="TestFixture" name="MenuElementGroupFixture" executed="True" result="Success" success="True" time="0.109" asserts="0">
+            <results>
+              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementGroupFixture.AddTo_adds_a_group_to_nav_bar" executed="True" result="Success" success="True" time="0.063" asserts="1" />
+              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementGroupFixture.AddTo_adds_a_matching_group" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementGroupFixture.AddTo_adds_all_options" executed="True" result="Success" success="True" time="0.016" asserts="0" />
+              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementGroupFixture.AddTo_adds_an_element_matching_menuGroup" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementGroupFixture.AddTo_adds_matching_options" executed="True" result="Success" success="True" time="0.016" asserts="0" />
+              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementGroupFixture.AddTo_adds_one_item_to_menu" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementGroupFixture.AddTo_sets_no_image_if_no_glyph" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementGroupFixture.AddTo_throws_no_exceptions_if_no_glyph" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="Store.Win.Tests.Tests.MenuItem.MenuElementGroupFixture.Null_options_is_equivalent_to_empty" executed="True" result="Success" success="True" time="0.000" asserts="1" />
             </results>
           </test-suite>
         </results>
