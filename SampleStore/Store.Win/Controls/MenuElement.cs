@@ -18,6 +18,8 @@ namespace Store.Controls
 	public class MenuElement : IMenuElement
 	{
 		private ToolStripItem _menuItem ;
+		private ExHyperlink _hyperLink ;
+		private ToolStripItem _toolbarItem ;
 		
 		/// <summary>
 		/// Gets the caption for this menu element.
@@ -60,7 +62,14 @@ namespace Store.Controls
         /// </summary>
 		public void Disable()
 		{
+			if (_menuItem != null)
+				_menuItem.Enabled = false ;
 			
+			if(_toolbarItem != null)
+				_toolbarItem.Enabled = false ;
+			
+			if (_hyperLink != null)
+				_hyperLink.Enabled = false ;
 		}
 		
         /// <summary>
@@ -68,7 +77,14 @@ namespace Store.Controls
         /// </summary>
 		public void Enable()
 		{
+			if (_menuItem != null)
+				_menuItem.Enabled = true ;
 			
+			if(_toolbarItem != null)
+				_toolbarItem.Enabled = true ;
+			
+			if (_hyperLink != null)
+				_hyperLink.Enabled = true ;			
 		}
         
         /// <summary>
@@ -110,14 +126,14 @@ namespace Store.Controls
 		/// <param name="menu">Panel to add this group to.</param>
 	    public virtual void AddTo(Panel container)
 	    {
-	    	var hyperlink = new ExHyperlink
+	    	_hyperLink = new ExHyperlink
 	    	{
 	    		Text = Caption,
 	    		Image = Glyph.GetSmall()
 	    	};
-	    	hyperlink.Click += ElementClicked;
+	    	_hyperLink.Click += ElementClicked;
 	    	
-	    	container.Controls.Add(hyperlink);	    	
+	    	container.Controls.Add(_hyperLink);	    	
 	    }
 	    
 	    /// <summary>
@@ -126,15 +142,16 @@ namespace Store.Controls
 		/// <param name="menu">Toolbar to add this group to.</param>
 	    public virtual void AddTo(ToolStrip toolbar)
 	    {
-	    	var item = new ToolStripButton
+	    	_toolbarItem = new ToolStripButton
 	    	{
 	    		Text = Caption,
 	    		ToolTipText = Tooltip,
-	    		Image = Glyph.GetMedium()
+	    		Image = Glyph.GetMedium(),
+	    		DisplayStyle = ToolStripItemDisplayStyle.Image
 	    	};
-	    	item.Click += ElementClicked;
+	    	_toolbarItem.Click += ElementClicked;
 	    	
-	    	toolbar.Items.Add(item);
+	    	toolbar.Items.Add(_toolbarItem);
 	    }
 	}
 }

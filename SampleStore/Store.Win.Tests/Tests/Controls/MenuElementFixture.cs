@@ -98,7 +98,7 @@ namespace Store.Win.Tests.Tests.MenuItem
 		}
 		
 		[Test]
-		public void AddTo_adds_an_item_to_the_tool_strip()
+		public void AddTo_adds_an_item_to_toolbar()
 		{
 			_element.AddTo(_toolbar);
 			
@@ -106,7 +106,17 @@ namespace Store.Win.Tests.Tests.MenuItem
 		}
 		
 		[Test]
-		public void AddTo_adds_a_matching_item()
+		public void AddTo_adds_a_image_only_item_to_toolbar()
+		{
+			_element.AddTo(_toolbar);
+			
+			var item = GetToolbarItem();
+			
+			Assert.That(item.DisplayStyle, Is.EqualTo(ToolStripItemDisplayStyle.Image));
+		}
+		
+		[Test]
+		public void AddTo_adds_a_matching_item_to_toolbar()
 		{
 			_element.AddTo(_toolbar);
 			
@@ -172,6 +182,75 @@ namespace Store.Win.Tests.Tests.MenuItem
 			item.PerformClick();
 			
 			Assert.That(actionHasBeenTriggered);
+		}
+		
+		[Test]
+		public void Disable_disables_menu_item()
+		{
+			_element.AddTo(_menu) ;
+			var menuItem = GetMenuItem();
+		
+			_element.Disable();
+			
+			Assert.That(menuItem.Enabled, Is.False);
+		}
+		
+		[Test]
+		public void Disable_disables_toolbar_item()
+		{
+			_element.AddTo(_toolbar);
+			var toolbarItem = GetToolbarItem();
+		
+			_element.Disable();
+			
+			Assert.That(toolbarItem.Enabled, Is.False);
+		}
+		
+		[Test]
+		public void Disable_disables_hyerlink()
+		{
+			_element.AddTo(_panel) ;			
+			var hyperLink = GetHyperLink();
+			
+			_element.Disable();
+			
+			Assert.That(hyperLink.Enabled, Is.False);
+		}
+		
+		[Test]
+		public void Enable_enables_a_disabled_menu_item()
+		{
+			_element.AddTo(_menu) ;
+			var menuItem = GetMenuItem();		
+			_element.Disable();
+			
+			_element.Enable();
+			
+			Assert.That(menuItem.Enabled, Is.True);
+		}
+		
+		[Test]
+		public void Enable_enables_a_disabled_toolbar_item()
+		{
+			_element.AddTo(_toolbar);
+			var toolbarItem = GetToolbarItem();
+			_element.Disable();
+			
+			_element.Enable();
+			
+			Assert.That(toolbarItem.Enabled, Is.True);
+		}
+		
+		[Test]
+		public void Enable_enables_a_disabled_hyperlink_item()
+		{
+			_element.AddTo(_panel) ;			
+			var hyperLink = GetHyperLink();
+			_element.Disable();
+			
+			_element.Enable();
+			
+			Assert.That(hyperLink.Enabled, Is.True);
 		}
 	}
 }
