@@ -8,6 +8,18 @@ namespace Store.Win.Tests.Tests.Controls
 {
 	public class StackLayoutUiTest: UiTest
 	{
+		public override string Name {
+			get {
+				return "Stack layout";
+			}
+		}
+		
+		public override string Module {
+			get {
+				return "Controls";
+			}
+		}
+		
 		public override void Run()
 		{
 			var form = new Form();

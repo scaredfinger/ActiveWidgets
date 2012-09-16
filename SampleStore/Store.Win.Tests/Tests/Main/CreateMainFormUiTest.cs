@@ -2,11 +2,20 @@
 
 namespace Store.Win.Tests.Tests.Main
 {
-	/// <summary>
-	/// Description of Create.
-	/// </summary>
 	public class CreateMainFormUiTest : UiTest
 	{		
+		public override string Name {
+			get {
+				return "Create instance" ;
+			}
+		}	
+		
+		public override string Module {
+			get {
+				return "Main";
+			}			
+		}
+		
 		public override void Run()
 		{
 		    var mainControl = new MainControl();
@@ -17,7 +26,7 @@ namespace Store.Win.Tests.Tests.Main
                     Toolbar = CreateMenuElements()
 				});
 			
-			mainControl.ShowDialog();
+			mainControl.Show();
 		}
 	}
 }

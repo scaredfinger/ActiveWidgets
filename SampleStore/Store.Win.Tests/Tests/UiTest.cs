@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+
 using ActiveWidgets.Controls;
 using Store.Controls;
 using Store.Domain;
@@ -7,6 +10,23 @@ namespace Store.Win.Tests.Tests
 {
 	public abstract class UiTest
 	{
+		private readonly List<Control> _actions = new List<Control>();
+		
+		public InteractiveTests Owner { get; set; }
+		
+		public abstract string Name { get; }
+		
+		public virtual string Description { get { return string.Empty;} }
+		
+		public abstract string Module { get ; }
+		
+		public IEnumerable<Control> Actions
+		{
+			get {
+				return _actions ;
+			}
+		}
+		
 		public abstract void Run();
 
 	    protected static IEnumerable<IMenuElementGroup> CreateMenuElementGroup()
@@ -31,6 +51,19 @@ namespace Store.Win.Tests.Tests
 	            list.Add(new MenuElement(Random.Name(), Random.Sentence(), Random.Glyph()));
 
 	        return list;
+	    }
+	    
+	    protected void AddAction(string name, Action action)
+	    {
+	    	var button = new Button()
+	    	{
+	    		Text = name
+	    	};
+	    	
+	    	button.Click += (s, e) =>
+	    		action();
+	    	
+	    	_actions.Add(button) ;
 	    }
 	}
 }

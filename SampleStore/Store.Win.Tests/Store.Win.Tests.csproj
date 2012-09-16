@@ -94,6 +94,8 @@
     <Compile Include="Tests\Controls\MenuElementGroupFixture.cs" />
     <Compile Include="Tests\Controls\StackLayoutUiTest.cs" />
     <Compile Include="Tests\Main\CreateMainFormUiTest.cs" />
+    <Compile Include="Tests\Main\DisableAndEnableButtons.cs" />
+    <Compile Include="Tests\Main\SetCurrentPage.cs" />
     <Compile Include="Tests\UiTest.cs" />
   </ItemGroup>
   <ItemGroup>

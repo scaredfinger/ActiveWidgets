@@ -31,25 +31,20 @@ namespace Store.Win.Tests
 		{
 			CG.Controls.NavigationBar.ExPanel _mainTests;
 			CG.Controls.NavigationBar.Office2003NavigationBarRenderer office2003NavigationBarRenderer1 = new CG.Controls.NavigationBar.Office2003NavigationBarRenderer();
-			CG.Controls.Grid.Buttons.OfficeButtonRenderer officeButtonRenderer1 = new CG.Controls.Grid.Buttons.OfficeButtonRenderer();
-			CG.Controls.NavigationBar.ExPanel exPanel1;
-			CG.Controls.NavigationBar.Office2003NavigationBarRenderer office2003NavigationBarRenderer2 = new CG.Controls.NavigationBar.Office2003NavigationBarRenderer();
-			CG.Controls.Grid.Buttons.ExButton exButton2;
-			CG.Controls.Grid.Buttons.OfficeButtonRenderer officeButtonRenderer2 = new CG.Controls.Grid.Buttons.OfficeButtonRenderer();
-			this.exButton1 = new CG.Controls.Grid.Buttons.ExButton();
+			this._testsPanel = new Store.Controls.StackPanel();
+			this._modules = new System.Windows.Forms.ComboBox();
+			this._output = new System.Windows.Forms.TextBox();
+			this._actions = new Store.Controls.StackPanel();
 			_mainTests = new CG.Controls.NavigationBar.ExPanel();
-			exPanel1 = new CG.Controls.NavigationBar.ExPanel();
-			exButton2 = new CG.Controls.Grid.Buttons.ExButton();
 			_mainTests.SuspendLayout();
-			exPanel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// _mainTests
 			// 
 			_mainTests.BackColor = System.Drawing.Color.White;
-			_mainTests.Controls.Add(this.exButton1);
-			_mainTests.HeaderText = "Main Tests";
-			_mainTests.Location = new System.Drawing.Point(12, 1);
+			_mainTests.Controls.Add(this._testsPanel);
+			_mainTests.HeaderText = "Tests";
+			_mainTests.Location = new System.Drawing.Point(12, 45);
 			_mainTests.Name = "_mainTests";
 			office2003NavigationBarRenderer1.BorderColor = System.Drawing.Color.DarkBlue;
 			office2003NavigationBarRenderer1.ColorPreset = CG.Controls.Common.ColorPresetType.Blue;
@@ -65,92 +60,60 @@ namespace Store.Win.Tests
 			office2003NavigationBarRenderer1.PanelSelectedColorTo = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(156)))), ((int)(((byte)(32)))));
 			office2003NavigationBarRenderer1.PanelTextColor = System.Drawing.Color.Black;
 			_mainTests.Renderer = office2003NavigationBarRenderer1;
-			_mainTests.Size = new System.Drawing.Size(236, 396);
+			_mainTests.Size = new System.Drawing.Size(236, 352);
 			_mainTests.TabIndex = 0;
-			_mainTests.Text = "MainTests";
+			_mainTests.Text = "Tests";
 			// 
-			// exButton1
+			// _testsPanel
 			// 
-			this.exButton1.BackColor = System.Drawing.Color.Transparent;
-			this.exButton1.CornerRadius = 3;
-			this.exButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-			this.exButton1.DrawFocusRect = true;
-			this.exButton1.ImageOffset = new System.Drawing.Point(4, 0);
-			this.exButton1.ImageSize = new System.Drawing.Size(16, 16);
-			this.exButton1.IsSplitButton = false;
-			this.exButton1.Location = new System.Drawing.Point(18, 37);
-			this.exButton1.MetroColorScheme = CG.Controls.Grid.Render.MetroScheme.Orange;
-			this.exButton1.Name = "exButton1";
-			this.exButton1.PaddingText = new System.Windows.Forms.Padding(4);
-			officeButtonRenderer1.TextColorDisabled = System.Drawing.SystemColors.GrayText;
-			this.exButton1.Renderer = officeButtonRenderer1;
-			this.exButton1.RenderType = CG.Controls.Common.EnRenderType.Office2007;
-			this.exButton1.Size = new System.Drawing.Size(100, 23);
-			this.exButton1.SplitButtonWidth = 20;
-			this.exButton1.TabIndex = 0;
-			this.exButton1.Text = "Main form";
-			this.exButton1.Click += new System.EventHandler(this.MainForm);
+			this._testsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+			this._testsPanel.Location = new System.Drawing.Point(1, 25);
+			this._testsPanel.Name = "_testsPanel";
+			this._testsPanel.Size = new System.Drawing.Size(234, 326);
+			this._testsPanel.TabIndex = 2;
 			// 
-			// exPanel1
+			// _modules
 			// 
-			exPanel1.BackColor = System.Drawing.Color.White;
-			exPanel1.Controls.Add(exButton2);
-			exPanel1.HeaderText = "Other Tests";
-			exPanel1.Location = new System.Drawing.Point(259, 1);
-			exPanel1.Name = "exPanel1";
-			office2003NavigationBarRenderer2.BorderColor = System.Drawing.Color.DarkBlue;
-			office2003NavigationBarRenderer2.ColorPreset = CG.Controls.Common.ColorPresetType.Blue;
-			office2003NavigationBarRenderer2.HeaderColorFrom = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(131)))), ((int)(((byte)(211)))));
-			office2003NavigationBarRenderer2.HeaderColorTo = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(55)))), ((int)(((byte)(156)))));
-			office2003NavigationBarRenderer2.HeaderTextColor = System.Drawing.Color.White;
-			office2003NavigationBarRenderer2.PanelBackColor = System.Drawing.Color.White;
-			office2003NavigationBarRenderer2.PanelColorFrom = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
-			office2003NavigationBarRenderer2.PanelColorTo = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(168)))), ((int)(((byte)(225)))));
-			office2003NavigationBarRenderer2.PanelOverColorFrom = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(210)))));
-			office2003NavigationBarRenderer2.PanelOverColorTo = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(200)))), ((int)(((byte)(106)))));
-			office2003NavigationBarRenderer2.PanelSelectedColorFrom = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(223)))), ((int)(((byte)(137)))));
-			office2003NavigationBarRenderer2.PanelSelectedColorTo = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(156)))), ((int)(((byte)(32)))));
-			office2003NavigationBarRenderer2.PanelTextColor = System.Drawing.Color.Black;
-			exPanel1.Renderer = office2003NavigationBarRenderer2;
-			exPanel1.Size = new System.Drawing.Size(236, 396);
-			exPanel1.TabIndex = 1;
-			exPanel1.Text = "Other Tests";
+			this._modules.FormattingEnabled = true;
+			this._modules.Location = new System.Drawing.Point(13, 12);
+			this._modules.Name = "_modules";
+			this._modules.Size = new System.Drawing.Size(235, 21);
+			this._modules.TabIndex = 2;
+			this._modules.SelectedIndexChanged += new System.EventHandler(this.ModuleSelected);
 			// 
-			// exButton2
+			// _output
 			// 
-			exButton2.BackColor = System.Drawing.Color.Transparent;
-			exButton2.CornerRadius = 3;
-			exButton2.DialogResult = System.Windows.Forms.DialogResult.None;
-			exButton2.DrawFocusRect = true;
-			exButton2.ImageOffset = new System.Drawing.Point(4, 0);
-			exButton2.ImageSize = new System.Drawing.Size(16, 16);
-			exButton2.IsSplitButton = false;
-			exButton2.Location = new System.Drawing.Point(18, 37);
-			exButton2.MetroColorScheme = CG.Controls.Grid.Render.MetroScheme.Orange;
-			exButton2.Name = "exButton2";
-			exButton2.PaddingText = new System.Windows.Forms.Padding(4);
-			officeButtonRenderer2.TextColorDisabled = System.Drawing.SystemColors.GrayText;
-			exButton2.Renderer = officeButtonRenderer2;
-			exButton2.RenderType = CG.Controls.Common.EnRenderType.Office2007;
-			exButton2.Size = new System.Drawing.Size(100, 23);
-			exButton2.SplitButtonWidth = 20;
-			exButton2.TabIndex = 0;
-			exButton2.Text = "Stack panel";
-			exButton2.Click += new System.EventHandler(this.StackPanel);
+			this._output.Location = new System.Drawing.Point(419, 12);
+			this._output.Multiline = true;
+			this._output.Name = "_output";
+			this._output.Size = new System.Drawing.Size(504, 384);
+			this._output.TabIndex = 4;
+			// 
+			// _actions
+			// 
+			this._actions.Location = new System.Drawing.Point(254, 12);
+			this._actions.Name = "_actions";
+			this._actions.Size = new System.Drawing.Size(159, 384);
+			this._actions.TabIndex = 5;
 			// 
 			// InteractiveTests
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(935, 409);
-			this.Controls.Add(exPanel1);
+			this.Controls.Add(this._actions);
+			this.Controls.Add(this._output);
+			this.Controls.Add(this._modules);
 			this.Controls.Add(_mainTests);
 			this.Name = "InteractiveTests";
 			this.Text = "InteractiveTess";
 			_mainTests.ResumeLayout(false);
-			exPanel1.ResumeLayout(false);
 			this.ResumeLayout(false);
+			this.PerformLayout();
 		}
-		private CG.Controls.Grid.Buttons.ExButton exButton1;
+		private Store.Controls.StackPanel _actions;
+		private System.Windows.Forms.TextBox _output;
+		private Store.Controls.StackPanel _testsPanel;
+		private System.Windows.Forms.ComboBox _modules;
 	}
 }
