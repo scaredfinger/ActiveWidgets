@@ -59,6 +59,7 @@
     <Compile Include="Units\Services\ServiceBusFixture.cs" />
     <Compile Include="Units\SupervisorFixture.cs" />
     <Compile Include="Units\Utils\AllTypesFixture.cs" />
+    <Compile Include="Units\Utils\TypeConstraintsExtensionsFixture.cs" />
     <Compile Include="Units\Utils\ForEachExtensionFixture.cs" />
     <Compile Include="Units\Utils\RenderTextExtensionFixture.cs" />
   </ItemGroup>

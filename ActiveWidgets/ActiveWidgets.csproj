@@ -65,6 +65,7 @@
     <Compile Include="Services\IServiceBus.cs" />
     <Compile Include="Services\ServiceBus.cs" />
     <Compile Include="Utils\AllTypes.cs" />
+    <Compile Include="Utils\TypeConstraintsExtensions.cs" />
     <Compile Include="Utils\ForEachExtension.cs" />
     <Compile Include="Utils\RenderExtension.cs" />
     <Compile Include="Widget.cs" />
