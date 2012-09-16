@@ -12,6 +12,18 @@ namespace Store.Win.Tests.Tests.MenuItem
 		private static readonly string ElementCaption = Random.Sentence();
 		private static readonly string ElementTooltip = Random.Sentence();
 		private static readonly Glyph ElementGlyph = Random.Glyph();
+		
+		public bool ActionHasBeenTriggered
+		{
+			get;
+			set;
+		}
+		
+		public bool ActionHasNotBeenTriggered
+		{
+			get;
+			set;
+		}
 
 		private MenuElement _element;
 		
@@ -22,11 +34,28 @@ namespace Store.Win.Tests.Tests.MenuItem
 		[SetUp]
 		public void Setup()
 		{
+			ActionHasBeenTriggered = false ;
+			ActionHasNotBeenTriggered = true ;
+			
 			_menu = new ToolStripMenuItem();
 			_panel = new Panel();
 			_toolbar = new ToolStrip();
 
 			_element = new MenuElement(ElementCaption, ElementTooltip, ElementGlyph);
+			
+			_element.Action += ActionTriggered;
+		}
+		
+		private void ActionTriggered(object sender, EventArgs e)	
+		{
+			ActionHasBeenTriggered = true ;
+			ActionHasNotBeenTriggered = false ;
+		}
+		
+		[TearDown]
+		public void TearDown()
+		{
+			_element.Action -= ActionTriggered;
 		}
 		
 		[Test]
@@ -154,43 +183,34 @@ namespace Store.Win.Tests.Tests.MenuItem
 		[Test]
 		public void On_menu_item_clicked_trigges_action()
 		{
-			var actionHasBeenTriggered = false ;
-			_element.Action += (s, e) => 
-				actionHasBeenTriggered = true ;
 			_element.AddTo(_menu) ;
 			var item = GetMenuItem();
 			
 			item.PerformClick();
 			
-			Assert.That(actionHasBeenTriggered) ;
+			Assert.That(ActionHasBeenTriggered) ;
 		}
 		
 		[Test]
 		public void On_navbar_link_clicked_triggers_action()
 		{
-			var actionHasBeenTriggered = false ;
-			_element.Action += (s, e) => 
-				actionHasBeenTriggered = true ;
 			_element.AddTo(_panel) ;
 			var item = GetHyperLink();
 			
 			item.PerformClick();
 			
-			Assert.That(actionHasBeenTriggered);
+			Assert.That(ActionHasBeenTriggered);
 		}
 		
 		[Test]
 		public void On_toolbar_item_clicked_triggers_action()
 		{
-			var actionHasBeenTriggered = false ;
-			_element.Action += (s, e) => 
-				actionHasBeenTriggered = true ;
 			_element.AddTo(_toolbar) ;
 			var item = GetToolbarItem();
 			
 			item.PerformClick();
 			
-			Assert.That(actionHasBeenTriggered);
+			Assert.That(ActionHasBeenTriggered);
 		}
 		
 		[Test]
@@ -284,15 +304,11 @@ namespace Store.Win.Tests.Tests.MenuItem
 		{
 			_element.AddTo(_toolbar);
 			var item = GetToolbarItem();
-			var actionHasNotBeenTriggered = true ;
-			_element.Action += (s, e) =>
-				actionHasNotBeenTriggered = false;
-			
 			_element.RemoveFrom(_toolbar);
 			
 			item.PerformClick();
 			
-			Assert.That(actionHasNotBeenTriggered);
+			Assert.That(ActionHasNotBeenTriggered);
 		}
 		
 		[Test]
@@ -316,16 +332,12 @@ namespace Store.Win.Tests.Tests.MenuItem
 		public void RemovesFrom_menu_removes_the_handler()
 		{
 			_element.AddTo(_menu);
-			var item = GetMenuItem();
-			var actionHasNotBeenTriggered = true ;
-			_element.Action += (s, e) =>
-				actionHasNotBeenTriggered = false;
-			
+			var item = GetMenuItem();			
 			_element.RemoveFrom(_menu);
 			
 			item.PerformClick();
 			
-			Assert.That(actionHasNotBeenTriggered);
+			Assert.That(ActionHasNotBeenTriggered);
 		}
 		
 		[Test]
@@ -349,64 +361,48 @@ namespace Store.Win.Tests.Tests.MenuItem
 		public void RemovesFrom_panel_removes_the_handler()
 		{
 			_element.AddTo(_panel);
-			var item = GetHyperLink();
-			var actionHasNotBeenTriggered = true ;
-			_element.Action += (s, e) =>
-				actionHasNotBeenTriggered = false;
-			
+			var item = GetHyperLink();			
 			_element.RemoveFrom(_panel);
 			
 			item.PerformClick();
 			
-			Assert.That(actionHasNotBeenTriggered);
+			Assert.That(ActionHasNotBeenTriggered);
 		}
 		
 		[Test]
 		public void Dispose_removes_toolbar_handler()
 		{
 			_element.AddTo(_toolbar);
-			var item = GetToolbarItem();
-			var actionHasNotBeenTriggered = true ;
-			_element.Action += (s, e) =>
-				actionHasNotBeenTriggered = false;
-			
+			var item = GetToolbarItem();			
 			_element.Dispose();
 			
 			item.PerformClick();
 			
-			Assert.That(actionHasNotBeenTriggered);
+			Assert.That(ActionHasNotBeenTriggered);
 		}
 		
 		[Test]
 		public void Dispose_removes_menu_handler()
 		{
 			_element.AddTo(_menu);
-			var item = GetMenuItem();
-			var actionHasNotBeenTriggered = true ;
-			_element.Action += (s, e) =>
-				actionHasNotBeenTriggered = false;
-			
+			var item = GetMenuItem();			
 			_element.Dispose();
 			
 			item.PerformClick();
 			
-			Assert.That(actionHasNotBeenTriggered);		
+			Assert.That(ActionHasNotBeenTriggered);		
 		}
 		
 		[Test]
 		public void Dispose_removes_hyperlink_handler()
 		{
 			_element.AddTo(_panel);
-			var item = GetHyperLink();
-			var actionHasNotBeenTriggered = true ;
-			_element.Action += (s, e) =>
-				actionHasNotBeenTriggered = false;
-			
+			var item = GetHyperLink();			
 			_element.Dispose();
 			
 			item.PerformClick();
 			
-			Assert.That(actionHasNotBeenTriggered);		
+			Assert.That(ActionHasNotBeenTriggered);		
 		}
 	}
 }
